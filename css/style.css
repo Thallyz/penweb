@@ -1,0 +1,328 @@
+/* ============================================================
+   PenWeb — Landing Page
+   Tema escuro combinando com a paleta da extensão (#1f2430)
+   ============================================================ */
+
+:root {
+  --fundo: #1f2430;
+  --fundo-2: #171b24;
+  --fundo-cartao: #272d3b;
+  --texto: #e8ecf3;
+  --texto-suave: #a8b0c0;
+  --primaria: #ffd441;      /* amarelo da extensão */
+  --primaria-escura: #e6bc2e;
+  --borda: #333b4d;
+  --raio: 14px;
+  --max: 1120px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a { color: var(--primaria); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1, h2, h3 { line-height: 1.2; font-weight: 700; }
+
+/* ===================== BOTÕES ===================== */
+.btn {
+  display: inline-block;
+  padding: 13px 26px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform .15s ease, background .2s ease, box-shadow .2s ease;
+  text-align: center;
+  border: 2px solid transparent;
+}
+.btn:hover { text-decoration: none; transform: translateY(-2px); }
+.btn:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+
+.btn-primario {
+  background: var(--primaria);
+  color: #1a1a1a;
+  box-shadow: 0 6px 18px rgba(255, 212, 65, .28);
+}
+.btn-primario:hover { background: var(--primaria-escura); }
+
+.btn-fantasma {
+  background: transparent;
+  color: var(--texto);
+  border-color: var(--borda);
+}
+.btn-fantasma:hover { border-color: var(--primaria); color: var(--primaria); }
+
+.btn-grande { padding: 16px 34px; font-size: 1.1rem; }
+
+/* ===================== BADGES ===================== */
+.badge {
+  display: inline-block;
+  background: rgba(255, 212, 65, .14);
+  color: var(--primaria);
+  border: 1px solid rgba(255, 212, 65, .35);
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  margin-bottom: 18px;
+}
+.badge-ia { background: rgba(120, 160, 255, .14); color: #a8c2ff; border-color: rgba(120,160,255,.35); }
+
+/* ===================== CABEÇALHO ===================== */
+.topo {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(31, 36, 48, .85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--borda);
+}
+.topo-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 66px;
+}
+.logo {
+  font-size: 1.35rem;
+  color: var(--texto);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+.logo:hover { text-decoration: none; }
+.logo strong { color: var(--primaria); }
+.logo-pen { font-size: 1.2rem; }
+
+.topo nav {
+  display: flex;
+  gap: 22px;
+}
+.topo nav a {
+  color: var(--texto-suave);
+  font-weight: 500;
+  font-size: .95rem;
+}
+.topo nav a:hover { color: var(--primaria); text-decoration: none; }
+
+.btn-topo { padding: 9px 20px; font-size: .92rem; }
+
+/* ===================== HERO ===================== */
+.hero {
+  padding: 70px 0 80px;
+  background:
+    radial-gradient(1200px 500px at 80% -10%, rgba(255,212,65,.10), transparent),
+    var(--fundo);
+}
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 48px;
+  align-items: center;
+}
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  margin-bottom: 18px;
+}
+.destaque { color: var(--primaria); }
+.subtitulo {
+  font-size: 1.15rem;
+  color: var(--texto-suave);
+  margin-bottom: 28px;
+  max-width: 540px;
+}
+.subtitulo strong { color: var(--texto); }
+.hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-nota {
+  margin-top: 18px;
+  font-size: .9rem;
+  color: var(--texto-suave);
+}
+.plataformas {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+  padding: 0;
+}
+.plataformas li {
+  font-size: .82rem;
+  color: var(--texto-suave);
+  border: 1px solid var(--borda);
+  border-radius: 999px;
+  padding: 4px 12px;
+}
+.plataformas li.ok {
+  color: var(--primaria);
+  border-color: rgba(255, 212, 65, .4);
+  background: rgba(255, 212, 65, .08);
+}
+.hero-imagem img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--raio);
+  border: 1px solid var(--borda);
+  box-shadow: 0 20px 50px rgba(0,0,0,.4);
+}
+
+/* ===================== SEÇÕES ===================== */
+.secao { padding: 72px 0; }
+.secao-escura { background: var(--fundo-2); }
+.secao h2 {
+  font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+  margin-bottom: 10px;
+}
+.secao-sub {
+  color: var(--texto-suave);
+  font-size: 1.05rem;
+  margin-bottom: 40px;
+  max-width: 680px;
+}
+.centro { text-align: center; }
+.centro .secao-sub { margin-left: auto; margin-right: auto; }
+
+/* ===================== GRADE DE RECURSOS ===================== */
+.grade-recursos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.cartao {
+  background: var(--fundo-cartao);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 26px;
+  transition: transform .18s ease, border-color .18s ease;
+}
+.cartao:hover { transform: translateY(-4px); border-color: var(--primaria); }
+.cartao-icone { font-size: 2rem; display: block; margin-bottom: 12px; }
+.cartao h3 { font-size: 1.15rem; margin-bottom: 8px; }
+.cartao p { color: var(--texto-suave); font-size: .96rem; }
+
+/* ===================== PENWEB AI ===================== */
+.ia-inner { max-width: 760px; }
+.ia-texto .lista-ia {
+  list-style: none;
+  margin: 18px 0 28px;
+  display: grid;
+  gap: 14px;
+}
+.lista-ia li {
+  background: var(--fundo-cartao);
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  padding: 14px 18px;
+  color: var(--texto-suave);
+}
+.lista-ia strong { color: var(--texto); }
+
+/* ===================== OFERTAS / AFILIADOS ===================== */
+.grade-ofertas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.oferta {
+  background: var(--fundo-cartao);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 26px;
+  color: var(--texto);
+  display: block;
+  transition: transform .18s ease, border-color .18s ease;
+}
+.oferta:hover { transform: translateY(-4px); border-color: var(--primaria); text-decoration: none; }
+.oferta-icone { font-size: 2rem; display: block; margin-bottom: 12px; }
+.oferta h3 { font-size: 1.1rem; margin-bottom: 6px; }
+.oferta p { color: var(--texto-suave); font-size: .94rem; margin-bottom: 14px; }
+.oferta-cta { color: var(--primaria); font-weight: 700; font-size: .95rem; }
+
+/* ===================== PUBLICIDADE (Adsterra — só neste site) ===================== */
+.secao-ad {
+  padding: 26px 0;
+  border-top: 1px solid var(--borda);
+  border-bottom: 1px solid var(--borda);
+  background: var(--fundo-2);
+}
+.ad-rotulo {
+  display: block;
+  font-size: .68rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+  margin-bottom: 10px;
+}
+.ad-slot {
+  min-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===================== FINAL / RODAPÉ ===================== */
+.secao-final {
+  background: linear-gradient(180deg, var(--fundo) 0%, var(--fundo-2) 100%);
+  text-align: center;
+}
+.rodape {
+  border-top: 1px solid var(--borda);
+  background: var(--fundo-2);
+  padding: 28px 0;
+}
+.rodape-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: var(--texto-suave);
+  font-size: .9rem;
+}
+.rodape-links a { color: var(--texto-suave); }
+.rodape-links a:hover { color: var(--primaria); }
+
+/* ===================== PÁGINA DE PRIVACIDADE ===================== */
+.pagina-simples { padding: 60px 0 80px; }
+.pagina-simples h1 { font-size: 2.2rem; margin-bottom: 8px; }
+.pagina-simples .atualizado { color: var(--texto-suave); font-size: .9rem; margin-bottom: 32px; }
+.pagina-simples h2 { font-size: 1.3rem; margin: 28px 0 8px; color: var(--primaria); }
+.pagina-simples p, .pagina-simples li { color: var(--texto-suave); margin-bottom: 12px; }
+.pagina-simples ul { margin-left: 22px; }
+.voltar { display: inline-block; margin-bottom: 28px; }
+
+/* ===================== RESPONSIVO ===================== */
+@media (max-width: 880px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 32px; }
+  .hero-imagem { order: -1; max-width: 340px; margin: 0 auto; }
+  .grade-recursos, .grade-ofertas { grid-template-columns: 1fr; }
+  .topo nav { display: none; }
+  .rodape-inner { flex-direction: column; text-align: center; }
+}
+
+/* ===================== ACESSIBILIDADE / MOVIMENTO ===================== */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+  .btn:hover, .cartao:hover, .oferta:hover { transform: none; }
+}
