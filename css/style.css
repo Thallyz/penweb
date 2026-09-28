@@ -134,7 +134,7 @@ h1, h2, h3 { line-height: 1.2; font-weight: 700; }
 }
 .topo nav a.lang:hover { border-color: var(--primaria); }
 
-.btn-topo { padding: 9px 20px; font-size: .92rem; }
+.btn-topo { padding: 9px 20px; font-size: .92rem; white-space: nowrap; }
 
 /* ===================== HERO ===================== */
 .hero {
