@@ -70,9 +70,10 @@ Abra o link no navegador. Se algo parecer sem estilo, espere 1–2 minutos e rec
 
 ## ⚙️ Ajustes que você pode querer fazer
 
-### 1. Trocar o link da lista de espera (PenWeb AI)
-Em `index.html`, procure por `https://forms.gle/SUBSTITUIRAPELOSEUFORM` e cole o link
-do seu **Google Forms** real. (Crie um formulário simples: "E-mail" + botão enviar.)
+### 1. Link da lista de espera (PenWeb AI) — já configurado ✅
+O botão "Entrar na lista de espera" do `index.html` já aponta para o Google Forms
+"Lista de espera — PenWeb AI". Para trocar no futuro, edite o `href` desse botão
+no `index.html` (procure por `docs.google.com/forms`).
 
 ### 2. Trocar as ofertas de afiliado SEM atualizar a extensão
 As ofertas do letreiro dentro da extensão agora vêm do arquivo **`ofertas.json`**
