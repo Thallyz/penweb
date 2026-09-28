@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PenWeb — Highlight, annotate and study on any web page</title>
+  <meta name="description" content="PenWeb is a free Chrome extension that turns any web page into a creative whiteboard. Highlight, draw and save your study notes. PT, EN and ES.">
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PenWeb — Your browsing, turned into a creative whiteboard">
+  <meta property="og:description" content="Highlight, annotate and study on any web page. Free on the Chrome Web Store.">
+  <meta property="og:image" content="../img/banner.png">
+  <meta property="og:url" content="https://thallyz.github.io/penweb/en/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" hreflang="pt-BR" href="https://thallyz.github.io/penweb/">
+  <link rel="alternate" hreflang="en" href="https://thallyz.github.io/penweb/en/">
+  <link rel="alternate" hreflang="x-default" href="https://thallyz.github.io/penweb/">
+
+  <link rel="icon" type="image/png" href="../img/poster.png">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Structured data (Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "PenWeb",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Chrome / Chromium",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "description": "Chrome extension to highlight, draw and annotate on any web page.",
+    "inLanguage": "en",
+    "url": "https://thallyz.github.io/penweb/en/",
+    "downloadUrl": "https://chromewebstore.google.com/detail/mmbhcihaiiamenkcagobpnkopbhdcmppd"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="topo">
+    <div class="container topo-inner">
+      <a href="./" class="logo" aria-label="PenWeb — home">
+        <span class="logo-pen" aria-hidden="true">✏️</span> Pen<strong>Web</strong>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#ai">PenWeb AI</a>
+        <a href="#partners">Partners</a>
+        <a href="privacy.html">Privacy</a>
+        <a class="lang" href="../" lang="pt-BR" hreflang="pt-BR" title="Mudar para português">PT</a>
+      </nav>
+      <a class="btn btn-primario btn-topo"
+         href="https://chromewebstore.google.com/detail/mmbhcihaiiamenkcagobpnkopbhdcmppd"
+         target="_blank" rel="noopener">
+        Install free
+      </a>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-texto">
+        <span class="badge">v1.3 — now in PT, EN and ES</span>
+        <h1>Your browsing, turned into a <span class="destaque">creative whiteboard</span>.</h1>
+        <p class="subtitulo">
+          Highlight, draw, annotate and save your study notes on
+          <strong>any web page</strong> — YouTube, in-browser PDFs, lecture slides,
+          online courses. All local, all yours, all free.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn btn-primario"
+             href="https://chromewebstore.google.com/detail/mmbhcihaiiamenkcagobpnkopbhdcmppd"
+             target="_blank" rel="noopener">
+            ⬇ Install on Chrome
+          </a>
+          <a class="btn btn-fantasma" href="#features">See features</a>
+        </div>
+        <p class="hero-nota">Built for students, exam prep candidates and medical residents.</p>
+        <ul class="plataformas" aria-label="Browser availability">
+          <li class="ok">✅ Chrome — available today</li>
+          <li>🔜 Edge Add-ons</li>
+          <li>🔜 Firefox</li>
+          <li>🔜 Safari</li>
+        </ul>
+      </div>
+      <div class="hero-imagem">
+        <img src="../img/poster.png" alt="PenWeb poster showing the drawing tool over a web page" width="540" height="540" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FEATURES ===================== -->
+  <section id="features" class="secao">
+    <div class="container">
+      <h2>Everything you need to study on the web</h2>
+      <p class="secao-sub">One click on the icon and the page becomes your notebook.</p>
+      <div class="grade-recursos">
+        <article class="cartao">
+          <span class="cartao-icone" aria-hidden="true">🖊️</span>
+          <h3>Professional pen</h3>
+          <p>Smooth strokes with adjustable pressure, thickness and colors. Draw and highlight precisely on any site.</p>
+        </article>
+        <article class="cartao">
+          <span class="cartao-icone" aria-hidden="true">🔦</span>
+          <h3>Highlighter</h3>
+          <p>Mark important passages in video lectures, online handouts and articles without changing the original page.</p>
+        </article>
+        <article class="cartao">
+          <span class="cartao-icone" aria-hidden="true">📸</span>
+          <h3>Real screen capture</h3>
+          <p>Save your annotations together with the page content as a PNG — perfect for review and flashcards.</p>
+        </article>
+        <article class="cartao">
+          <span class="cartao-icone" aria-hidden="true">💾</span>
+          <h3>Smart autosave</h3>
+          <p>Reloaded the page by accident? PenWeb offers to restore your drawing automatically.</p>
+        </article>
+        <article class="cartao">
+          <span class="cartao-icone" aria-hidden="true">🌎</span>
+          <h3>Trilingual</h3>
+          <p>Interface in English, Portuguese and Spanish, detected automatically from your browser language.</p>
+        </article>
+        <article class="cartao">
+          <span class="cartao-icone" aria-hidden="true">♿</span>
+          <h3>Accessible to everyone</h3>
+          <p>High-contrast mode, adjustable UI scale and respect for reduced-motion preferences.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PENWEB AI ===================== -->
+  <section id="ai" class="secao secao-escura">
+    <div class="container ia-inner">
+      <div class="ia-texto">
+        <span class="badge badge-ia">Coming soon</span>
+        <h2>PenWeb <span class="destaque">AI</span></h2>
+        <p>
+          The next step: turn your highlights into active knowledge.
+          The PenWeb premium line will use artificial intelligence to:
+        </p>
+        <ul class="lista-ia">
+          <li>🧠 <strong>Explain any highlight</strong> — select a passage and get a plain-language explanation on the spot.</li>
+          <li>🗺️ <strong>Generate mind maps</strong> from your highlights in video lectures and handouts.</li>
+          <li>🃏 <strong>Create flashcards</strong> automatically for spaced repetition.</li>
+          <li>📝 <strong>Summarize entire pages</strong> focused on what you marked.</li>
+        </ul>
+        <a class="btn btn-primario"
+           href="https://docs.google.com/forms/d/e/1FAIpQLSdpFt6QiUQgas3ZFGnHusciwl2RU0uWP3MwsT-x-jGPVzrclA/viewform"
+           target="_blank" rel="noopener">
+          Join the waitlist
+        </a>
+        <p class="hero-nota">Waitlist members get special conditions at launch.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COMMERCIAL PARTNERS (AFFILIATE) ===================== -->
+  <section id="partners" class="secao">
+    <div class="container">
+      <h2>Commercial partners</h2>
+      <p class="secao-sub">
+        Products that fit online students — and life outside studying.
+        <em>Disclosure: the links below are affiliate links — if you buy through them,
+        PenWeb earns a small commission at no extra cost to you. This helps keep the
+        extension free. They are only suggestions: nobody has to buy anything.</em>
+      </p>
+      <div class="grade-ofertas">
+        <a class="oferta" href="https://meli.la/1jJF2az" target="_blank" rel="noopener sponsored">
+          <span class="oferta-icone" aria-hidden="true">🖨️</span>
+          <h3>Multifunction printer</h3>
+          <p>Print your summaries and PenWeb captures.</p>
+          <span class="oferta-cta">See offer →</span>
+        </a>
+        <a class="oferta" href="https://meli.la/2JVefme" target="_blank" rel="noopener sponsored">
+          <span class="oferta-icone" aria-hidden="true">💪</span>
+          <h3>Creatine</h3>
+          <p>Focus and energy for long study sessions.</p>
+          <span class="oferta-cta">See offer →</span>
+        </a>
+        <a class="oferta" href="https://meli.la/14F6ckz" target="_blank" rel="noopener sponsored">
+          <span class="oferta-icone" aria-hidden="true">🚲</span>
+          <h3>Exercise bike</h3>
+          <p>Study and move at the same time.</p>
+          <span class="oferta-cta">See offer →</span>
+        </a>
+        <a class="oferta" href="https://meli.la/2wqeHNj" target="_blank" rel="noopener sponsored">
+          <span class="oferta-icone" aria-hidden="true">🍳</span>
+          <h3>Non-stick cookware set</h3>
+          <p>Ceramic, 5 pieces — practical cooking for students living on their own.</p>
+          <span class="oferta-cta">See offer →</span>
+        </a>
+        <a class="oferta" href="https://meli.la/2VDWRpG" target="_blank" rel="noopener sponsored">
+          <span class="oferta-icone" aria-hidden="true">🩳</span>
+          <h3>Kids' boxer briefs kit</h3>
+          <p>Seamless microfiber, 12-pack.</p>
+          <span class="oferta-cta">See offer →</span>
+        </a>
+        <a class="oferta" href="https://meli.la/1z9NSv5" target="_blank" rel="noopener sponsored">
+          <span class="oferta-icone" aria-hidden="true">📱</span>
+          <h3>iPhone 17 Pro Max 512GB</h3>
+          <p>Authorized reseller.</p>
+          <span class="oferta-cta">See offer →</span>
+        </a>
+        <a class="oferta" href="https://meli.la/1oN7WaF" target="_blank" rel="noopener sponsored">
+          <span class="oferta-icone" aria-hidden="true">📺</span>
+          <h3>Philco 43" Full HD Smart TV</h3>
+          <p>Roku TV, HDR10, Dolby Audio.</p>
+          <span class="oferta-cta">See offer →</span>
+        </a>
+        <a class="oferta" href="https://meli.la/1FCchKR" target="_blank" rel="noopener sponsored">
+          <span class="oferta-icone" aria-hidden="true">🎮</span>
+          <h3>PlayStation 5 Pro 2TB</h3>
+          <p>A well-earned break between study blocks.</p>
+          <span class="oferta-cta">See offer →</span>
+        </a>
+        <a class="oferta" href="https://meli.la/23gSGkk" target="_blank" rel="noopener sponsored">
+          <span class="oferta-icone" aria-hidden="true">📺</span>
+          <h3>TCL 85" QLED 4K Smart TV</h3>
+          <p>Google TV, HDR10+, Dolby Atmos.</p>
+          <span class="oferta-cta">See offer →</span>
+        </a>
+        <a class="oferta" href="https://meli.la/1JwRPJm" target="_blank" rel="noopener sponsored">
+          <span class="oferta-icone" aria-hidden="true">📱</span>
+          <h3>Samsung Galaxy S25 Ultra</h3>
+          <p>256GB, 5G, quad camera.</p>
+          <span class="oferta-cta">See offer →</span>
+        </a>
+        <a class="oferta" href="https://meli.la/1P2z2Wb" target="_blank" rel="noopener sponsored">
+          <span class="oferta-icone" aria-hidden="true">🎮</span>
+          <h3>PlayStation 5 Slim 1TB</h3>
+          <p>Disc edition, white.</p>
+          <span class="oferta-cta">See offer →</span>
+        </a>
+        <a class="oferta" href="https://meli.la/1fPv4Dn" target="_blank" rel="noopener sponsored">
+          <span class="oferta-icone" aria-hidden="true">💻</span>
+          <h3>Samsung Galaxy Book4 laptop</h3>
+          <p>i3, 8GB, 256GB SSD, 15.6" — ready for online classes.</p>
+          <span class="oferta-cta">See offer →</span>
+        </a>
+        <a class="oferta" href="https://meli.la/1HbzkbQ" target="_blank" rel="noopener sponsored">
+          <span class="oferta-icone" aria-hidden="true">📱</span>
+          <h3>OUKITEL P2 Plus smartphone</h3>
+          <p>5G, 5000mAh battery, 120Hz display.</p>
+          <span class="oferta-cta">See offer →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRIVACY / FINAL CTA ===================== -->
+  <section class="secao secao-final">
+    <div class="container centro">
+      <h2>Privacy first</h2>
+      <p class="secao-sub">
+        PenWeb <strong>collects no personal data</strong>. Your drawings are saved
+        only in your browser, on your computer. Nothing is sent to any server.
+        <a href="privacy.html">Read the full policy</a>.
+      </p>
+      <a class="btn btn-primario btn-grande"
+         href="https://chromewebstore.google.com/detail/mmbhcihaiiamenkcagobpnkopbhdcmppd"
+         target="_blank" rel="noopener">
+        Install PenWeb — it's free
+      </a>
+    </div>
+  </section>
+
+  <!-- Discreet footer advertising (this site only, never inside the extension).
+       To remove ads from the site entirely: delete this whole <section> block. -->
+  <section class="secao-ad" aria-label="Advertisement">
+    <div class="container centro">
+      <span class="ad-rotulo">Advertisement</span>
+      <div class="ad-slot">
+        <script>
+          atOptions = {
+            'key' : '4fb14aadfb774f7a273d13585cd33fdf',
+            'format' : 'iframe',
+            'height' : 60,
+            'width' : 468,
+            'params' : {}
+          };
+        </script>
+        <script src="https://www.highrevenueformat.com/4fb14aadfb774f7a273d13585cd33fdf/invoke.js"></script>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="rodape">
+    <div class="container rodape-inner">
+      <p>© 2026 PenWeb — made with dedication in Brazil 🇧🇷</p>
+      <p class="rodape-links">
+        <a href="mailto:youthman95@gmail.com">Contact</a> ·
+        <a href="https://github.com/Thallyz" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="privacy.html">Privacy</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -6,16 +6,22 @@ pronta para hospedar **de graça** no **GitHub Pages**.
 ## 📁 Estrutura
 
 ```
-penweb-site/
-├── index.html          ← página principal
-├── privacidade.html    ← política de privacidade (use esta URL na Chrome Web Store)
+penweb/
+├── index.html          ← página principal (PT-BR)
+├── privacidade.html    ← política de privacidade PT (use esta URL na Chrome Web Store)
 ├── ofertas.json        ← ofertas remotas do letreiro da extensão (edite aqui!)
+├── en/
+│   ├── index.html      ← versão em inglês (nativa, não traduzida por máquina)
+│   └── privacy.html    ← política de privacidade EN
 ├── css/
 │   └── style.css       ← todo o estilo
 └── img/
     ├── banner.png      ← banner para redes sociais / Open Graph
     └── poster.png      ← cartaz usado no hero e como favicon
 ```
+
+O site é bilíngue: o seletor **EN/PT** fica no menu do topo. As tags `hreflang`
+dizem ao Google qual versão indexar para cada idioma.
 
 ---
 
@@ -75,18 +81,20 @@ O botão "Entrar na lista de espera" do `index.html` já aponta para o Google Fo
 "Lista de espera — PenWeb AI". Para trocar no futuro, edite o `href` desse botão
 no `index.html` (procure por `docs.google.com/forms`).
 
-### 2. Trocar as ofertas de afiliado SEM atualizar a extensão
-As ofertas do letreiro dentro da extensão agora vêm do arquivo **`ofertas.json`**
-deste repositório. Para adicionar/trocar uma oferta:
+### 2. Adicionar/trocar parceiros comerciais (site) e ofertas (extensão)
+**No site:** a seção "Parceiros comerciais" (`id="parceiros"` no `index.html` e
+`id="partners"` no `en/index.html`) é uma grade de cards. Para adicionar um parceiro,
+copie um bloco `<a class="oferta" ...>`, troque emoji, título, descrição e link,
+e cole dentro de `<div class="grade-ofertas">`. Faça o mesmo nas duas línguas.
+Mantenha o aviso de divulgação — é exigência legal e dá credibilidade.
+
+**Na extensão (letreiro):** as ofertas vêm do arquivo **`ofertas.json`** deste
+repositório. Para adicionar/trocar:
 1. Abra `ofertas.json` aqui no GitHub e clique no lápis (editar).
 2. Adicione um objeto com `emoji`, `texto`, `cta` e `link` (seu link de afiliado).
 3. Faça o commit. Pronto: em até **6 horas** (cache) todas as instalações do
    PenWeb passam a mostrar a oferta nova — **sem publicar versão nova na loja**.
    (Se a rede falhar, a extensão usa a lista embutida de fallback.)
-
-Os cards de recomendação do site também podem ser editados em `index.html`,
-na seção `id="recomendacoes"`. Mantenha o aviso de divulgação — é exigência
-legal e dá credibilidade.
 
 ### 3. Domínio próprio (penweb.com) — no futuro
 Quando comprar o domínio:
@@ -95,10 +103,13 @@ Quando comprar o domínio:
    `penweb.com` e `www` para `thallyz.github.io`.
 3. Marque **Enforce HTTPS** depois que o certificado for gerado (leva alguns minutos).
 
-### 4. Adsterra / anúncios — SIM, aqui pode!
-Este site é **seu**, então aqui você **pode** colocar um snippet do Adsterra
-(ou Google AdSense) **legalmente**, sem risco para a extensão. Basta colar o
-`<script>` do Adsterra antes de `</body>` no `index.html`.
+### 4. Anúncios (Adsterra) — já instalados, discretos e removíveis
+O snippet do Adsterra já está no site, **somente no rodapé** (bloco
+`<section class="secao-ad">` do `index.html` e do `en/index.html`), com o rótulo
+"Publicidade". É legal porque o site é seu — e discreto para não forçar ninguém.
+Para **remover os anúncios por completo**: apague esse bloco `<section>` inteiro
+nos dois arquivos. Para trocar de rede (ex.: AdSense), substitua o conteúdo de
+`<div class="ad-slot">`.
 
 > ⚠️ **Nunca** coloque Adsterra dentro da extensão (`content.js`) — isso viola a
 > política da Chrome Web Store e pode banir sua conta. No site próprio, tudo bem.

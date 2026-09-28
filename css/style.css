@@ -124,6 +124,15 @@ h1, h2, h3 { line-height: 1.2; font-weight: 700; }
   font-size: .95rem;
 }
 .topo nav a:hover { color: var(--primaria); text-decoration: none; }
+.topo nav a.lang {
+  border: 1px solid var(--borda);
+  border-radius: 999px;
+  padding: 2px 10px;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+.topo nav a.lang:hover { border-color: var(--primaria); }
 
 .btn-topo { padding: 9px 20px; font-size: .92rem; }
 
@@ -237,47 +246,48 @@ h1, h2, h3 { line-height: 1.2; font-weight: 700; }
 }
 .lista-ia strong { color: var(--texto); }
 
-/* ===================== OFERTAS / AFILIADOS ===================== */
+/* ===================== OFERTAS / PARCEIROS COMERCIAIS ===================== */
 .grade-ofertas {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 16px;
 }
 .oferta {
   background: var(--fundo-cartao);
   border: 1px solid var(--borda);
   border-radius: var(--raio);
-  padding: 26px;
+  padding: 20px;
   color: var(--texto);
   display: block;
   transition: transform .18s ease, border-color .18s ease;
 }
 .oferta:hover { transform: translateY(-4px); border-color: var(--primaria); text-decoration: none; }
-.oferta-icone { font-size: 2rem; display: block; margin-bottom: 12px; }
-.oferta h3 { font-size: 1.1rem; margin-bottom: 6px; }
-.oferta p { color: var(--texto-suave); font-size: .94rem; margin-bottom: 14px; }
-.oferta-cta { color: var(--primaria); font-weight: 700; font-size: .95rem; }
+.oferta-icone { font-size: 1.7rem; display: block; margin-bottom: 10px; }
+.oferta h3 { font-size: 1rem; margin-bottom: 6px; }
+.oferta p { color: var(--texto-suave); font-size: .88rem; margin-bottom: 12px; }
+.oferta-cta { color: var(--primaria); font-weight: 700; font-size: .9rem; }
 
-/* ===================== PUBLICIDADE (Adsterra — só neste site) ===================== */
+/* ===================== PUBLICIDADE (Adsterra — só neste site, discreta no rodapé) ===================== */
 .secao-ad {
-  padding: 26px 0;
+  padding: 12px 0 16px;
   border-top: 1px solid var(--borda);
-  border-bottom: 1px solid var(--borda);
-  background: var(--fundo-2);
+  background: transparent;
 }
 .ad-rotulo {
   display: block;
-  font-size: .68rem;
+  font-size: .6rem;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--texto-suave);
-  margin-bottom: 10px;
+  opacity: .55;
+  margin-bottom: 6px;
 }
 .ad-slot {
   min-height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: .85;
 }
 
 /* ===================== FINAL / RODAPÉ ===================== */
