@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PenWeb — Grife, anote e estude em qualquer página da web</title>
-  <meta name="description" content="PenWeb é uma extensão gratuita para Chrome que transforma qualquer página da web em um quadro criativo. Grife textos, desenhe, salve seus estudos. PT, EN e ES.">
+  <title>PenWeb — Extensão para grifar, desenhar e anotar em qualquer página da web</title>
+  <meta name="description" content="Extensão gratuita para Chrome: grife, desenhe e anote em qualquer página — PDFs, videoaulas e apostilas. Tudo local, sem conta. PT, EN e ES.">
 
   <!-- Open Graph / redes sociais -->
   <meta property="og:type" content="website">
@@ -267,11 +267,78 @@
     </div>
   </section>
 
+  <!-- ===================== PERGUNTAS FREQUENTES (SEO) ===================== -->
+  <section id="faq" class="secao faq">
+    <div class="container ia-inner">
+      <h2>Perguntas frequentes</h2>
+      <details>
+        <summary>Como grifar PDFs e videoaulas no navegador?</summary>
+        <p>Abra o PDF ou a videoaula no Chrome, clique no ícone do PenWeb e use o marca-texto ou a caneta diretamente sobre a página — sem alterar o arquivo original.</p>
+      </details>
+      <details>
+        <summary>Dá para anotar em qualquer site, inclusive YouTube?</summary>
+        <p>Sim. O PenWeb desenha uma camada sobre a página atual: funciona em artigos, apostilas online, plataformas de curso e videoaulas no YouTube.</p>
+      </details>
+      <details>
+        <summary>O PenWeb é grátis? Preciso criar conta?</summary>
+        <p>É grátis e não pede conta, e-mail ou login. Você instala da Chrome Web Store e usa na hora.</p>
+      </details>
+      <details>
+        <summary>Meus desenhos são enviados para algum servidor?</summary>
+        <p>Não. Tudo fica salvo apenas no armazenamento do seu navegador. Nada é transmitido — por isso suas anotações continuam lá mesmo sem internet.</p>
+      </details>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "pt-BR",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Como grifar PDFs e videoaulas no navegador?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Abra o PDF ou a videoaula no Chrome, clique no ícone do PenWeb e use o marca-texto ou a caneta diretamente sobre a página, sem alterar o arquivo original." }
+      },
+      {
+        "@type": "Question",
+        "name": "Dá para anotar em qualquer site, inclusive YouTube?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sim. O PenWeb desenha uma camada sobre a página atual: funciona em artigos, apostilas online, plataformas de curso e videoaulas no YouTube." }
+      },
+      {
+        "@type": "Question",
+        "name": "O PenWeb é grátis? Preciso criar conta?",
+        "acceptedAnswer": { "@type": "Answer", "text": "É grátis e não pede conta, e-mail ou login. Você instala da Chrome Web Store e usa na hora." }
+      },
+      {
+        "@type": "Question",
+        "name": "Meus desenhos são enviados para algum servidor?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Não. Tudo fica salvo apenas no armazenamento do seu navegador. Nada é transmitido." }
+      }
+    ]
+  }
+  </script>
+
   <!-- PUBLICIDADE discreta, apenas no rodapé (permitida só NESTE site, nunca na extensão).
        Para remover o anúncio do site por completo: apague este bloco <section> inteiro. -->
   <section class="secao-ad" aria-label="Publicidade">
     <div class="container centro">
       <span class="ad-rotulo">Publicidade</span>
+      <!-- Slot 1: banner 468x60 -->
+      <div class="ad-slot">
+        <script>
+          atOptions = {
+            'key' : '4fb14aadfb774f7a273d13585cd33fdf',
+            'format' : 'iframe',
+            'height' : 60,
+            'width' : 468,
+            'params' : {}
+          };
+        </script>
+        <script src="https://www.highrevenueformat.com/4fb14aadfb774f7a273d13585cd33fdf/invoke.js"></script>
+      </div>
+      <!-- Slot 2: Native Banner -->
       <div class="ad-slot">
         <script async="async" data-cfasync="false"
           src="https://pl31563099.profitableratecpmnetwork.com/891759b3e6baa5ee8500f10f02b141ff/invoke.js"></script>

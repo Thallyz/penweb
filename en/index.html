@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PenWeb — Highlight, annotate and study on any web page</title>
-  <meta name="description" content="PenWeb is a free Chrome extension that turns any web page into a creative whiteboard. Highlight, draw and save your study notes. PT, EN and ES.">
+  <title>PenWeb — Chrome extension to highlight, draw and annotate any web page</title>
+  <meta name="description" content="Free Chrome extension to highlight, draw and annotate any web page — PDFs, video lectures and handouts. All local, no account needed. PT, EN and ES.">
 
   <!-- Open Graph / social -->
   <meta property="og:type" content="website">
@@ -268,11 +268,78 @@
     </div>
   </section>
 
+  <!-- ===================== FAQ (SEO) ===================== -->
+  <section id="faq" class="secao faq">
+    <div class="container ia-inner">
+      <h2>Frequently asked questions</h2>
+      <details>
+        <summary>How do I highlight PDFs and web pages in Chrome?</summary>
+        <p>Open the PDF or the page in Chrome, click the PenWeb icon and use the highlighter or the pen directly on top of it — the original file is never changed.</p>
+      </details>
+      <details>
+        <summary>Can I annotate any website, including YouTube lectures?</summary>
+        <p>Yes. PenWeb draws a layer over the current page: it works on articles, online handouts, course platforms and YouTube video lectures.</p>
+      </details>
+      <details>
+        <summary>Is PenWeb free? Do I need an account?</summary>
+        <p>It is free and asks for no account, e-mail or login. Install it from the Chrome Web Store and start right away.</p>
+      </details>
+      <details>
+        <summary>Are my drawings uploaded to any server?</summary>
+        <p>No. Everything is stored only in your browser's local storage. Nothing is transmitted — your notes stay with you even offline.</p>
+      </details>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "en",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I highlight PDFs and web pages in Chrome?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Open the PDF or the page in Chrome, click the PenWeb icon and use the highlighter or the pen directly on top of it. The original file is never changed." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I annotate any website, including YouTube lectures?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. PenWeb draws a layer over the current page: it works on articles, online handouts, course platforms and YouTube video lectures." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is PenWeb free? Do I need an account?",
+        "acceptedAnswer": { "@type": "Answer", "text": "It is free and asks for no account, e-mail or login. Install it from the Chrome Web Store and start right away." }
+      },
+      {
+        "@type": "Question",
+        "name": "Are my drawings uploaded to any server?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Everything is stored only in your browser's local storage. Nothing is transmitted." }
+      }
+    ]
+  }
+  </script>
+
   <!-- Discreet footer advertising (this site only, never inside the extension).
        To remove ads from the site entirely: delete this whole <section> block. -->
   <section class="secao-ad" aria-label="Advertisement">
     <div class="container centro">
       <span class="ad-rotulo">Advertisement</span>
+      <!-- Slot 1: 468x60 banner -->
+      <div class="ad-slot">
+        <script>
+          atOptions = {
+            'key' : '4fb14aadfb774f7a273d13585cd33fdf',
+            'format' : 'iframe',
+            'height' : 60,
+            'width' : 468,
+            'params' : {}
+          };
+        </script>
+        <script src="https://www.highrevenueformat.com/4fb14aadfb774f7a273d13585cd33fdf/invoke.js"></script>
+      </div>
+      <!-- Slot 2: Native Banner -->
       <div class="ad-slot">
         <script async="async" data-cfasync="false"
           src="https://pl31563099.profitableratecpmnetwork.com/891759b3e6baa5ee8500f10f02b141ff/invoke.js"></script>

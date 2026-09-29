@@ -292,6 +292,23 @@ h1, h2, h3 { line-height: 1.2; font-weight: 700; }
 /* Native Banner: impede que o card vaze da tela no celular */
 .ad-slot > div,
 .ad-slot iframe { max-width: 100%; }
+.secao-ad .ad-slot + .ad-slot { margin-top: 12px; }
+
+/* ===================== FAQ ===================== */
+.faq details {
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 14px 18px;
+  background: var(--fundo-cartao);
+}
+.faq details + details { margin-top: 10px; }
+.faq summary { cursor: pointer; font-weight: 600; }
+.faq details[open] summary { color: var(--primaria); }
+.faq details p {
+  color: var(--texto-suave);
+  margin: 8px 0 0;
+  font-size: .95rem;
+}
 
 /* ===================== FINAL / RODAPÉ ===================== */
 .secao-final {

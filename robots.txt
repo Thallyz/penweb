@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thallyz.github.io/penweb/sitemap.xml
