@@ -7,7 +7,7 @@ videoaulas, PDFs no navegador, apostilas, artigos — em um quadro de estudos.
 Todo o conteúdo é processado e armazenado **localmente no navegador do usuário**:
 nenhum dado pessoal é coletado ou transmitido.
 
-🔗 [Chrome Web Store](https://chromewebstore.google.com/detail/penweb/mmbhcihaimenkcagobpnkopbhdcgpopd) ·
+🔗 [Chrome Web Store — em breve](https://chromewebstore.google.com/detail/penweb/mmbhcihaimenkcagobpnkopbhdcgpopd) ·
 🌐 [Site oficial](https://thallyz.github.io/penweb/) ·
 🇬🇧 [English site](https://thallyz.github.io/penweb/en/)
 
@@ -21,6 +21,9 @@ nenhum dado pessoal é coletado ou transmitido.
 - **Autosave por URL** — ao recarregar a página, o desenho da sessão pode ser restaurado.
 - **Interface trilíngue** — português, inglês e espanhol, detectados pelo idioma do navegador.
 - **Acessibilidade** — alto contraste, escala de interface e respeito a `prefers-reduced-motion`.
+- **Suavização em tempo real** — toggle na barra principal, traço liso enquanto você desenha.
+- **Markdown e matemática legíveis** — frações reais, blocos de código, botão copiar em cada resposta da IA.
+- **Captura de região + visão** — recorte uma parte da página (ou cole um print) e a IA analisa só aquilo.
 
 ## Sobre este repositório
 
@@ -69,7 +72,7 @@ vivem apenas no `localStorage` do dispositivo. Detalhes em
 
 ## Roadmap
 
-- [x] Chrome (Manifest V3) — publicado
+- [ ] Chrome (Manifest V3) — em breve na Chrome Web Store
 - [ ] Edge Add-ons
 - [ ] Firefox
 - [ ] Safari
@@ -100,7 +103,7 @@ configuration (`ofertas.json`) consumed by the extension, which is fetched with 
 6-hour `localStorage` cache and an embedded fallback so the offer panel can be
 updated without republishing the extension.
 
-Install: [Chrome Web Store](https://chromewebstore.google.com/detail/penweb/mmbhcihaimenkcagobpnkopbhdcgpopd) ·
+Install: [Chrome Web Store — coming soon](https://chromewebstore.google.com/detail/penweb/mmbhcihaimenkcagobpnkopbhdcgpopd) ·
 Privacy: [policy](https://thallyz.github.io/penweb/en/privacy.html)
 
 </details>
