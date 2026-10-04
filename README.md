@@ -1,109 +1,99 @@
 # PenWeb
 
-**Grife, desenhe e anote em qualquer página da web.**
+**Highlight, draw and annotate on any web page.**
 
-PenWeb é uma extensão para Chrome (Manifest V3) que transforma qualquer página —
-videoaulas, PDFs no navegador, apostilas, artigos — em um quadro de estudos.
-Todo o conteúdo é processado e armazenado **localmente no navegador do usuário**:
-nenhum dado pessoal é coletado ou transmitido.
+PenWeb is a free Chrome extension (Manifest V3) that turns any page — video lectures, in-browser PDFs, handouts, articles — into a study whiteboard. Everything is processed and stored **locally in your browser**: no personal data is collected or transmitted.
 
-🔗 [Chrome Web Store — em breve](https://chromewebstore.google.com/detail/penweb/mmbhcihaimenkcagobpnkopbhdcgpopd) ·
-🌐 [Site oficial](https://thallyz.github.io/penweb/) ·
-🇬🇧 [English site](https://thallyz.github.io/penweb/en/)
+🔗 [Chrome Web Store — coming soon](https://chromewebstore.google.com/detail/penweb/mmbhcihaimenkcagobpnkopbhdcgpopd) ·
+🌐 [Website](https://thallyz.github.io/penweb/en/) ·
+🇧🇷 [Site em português](https://thallyz.github.io/penweb/)
 
 ![PenWeb](img/poster.png)
 
-## Recursos
+---
 
-- **Caneta com pressão** — espessura, cor e opacidade ajustáveis, traço suavizado.
-- **Marca-texto** — destaque trechos sem alterar o DOM original da página.
-- **Captura real da tela** — exporta a anotação junto com o conteúdo visível em PNG.
-- **Autosave por URL** — ao recarregar a página, o desenho da sessão pode ser restaurado.
-- **Interface trilíngue** — português, inglês e espanhol, detectados pelo idioma do navegador.
-- **Acessibilidade** — alto contraste, escala de interface e respeito a `prefers-reduced-motion`.
-- **Suavização em tempo real** — toggle na barra principal, traço liso enquanto você desenha.
-- **Markdown e matemática legíveis** — frações reais, blocos de código, botão copiar em cada resposta da IA.
-- **Captura de região + visão** — recorte uma parte da página (ou cole um print) e a IA analisa só aquilo.
+## What's new in v1.6
 
-## Sobre este repositório
+### 〰️ Real-time stroke smoothing
+Toggle smoothing on the main toolbar and get a clean, steady line while you draw — no more jittery strokes on touchpads or touchscreens.
 
-Este repositório contém o **site oficial** do PenWeb (página estática, HTML + CSS puros,
-hospedada no GitHub Pages) e a **configuração remota** consumida pela extensão.
+### 🧮 Readable math & code
+AI responses now render real fractions, code blocks and equations. Every response has a one-click copy button.
 
-```
-penweb/
-├── index.html          # página principal (pt-BR)
-├── privacidade.html    # política de privacidade (pt-BR)
-├── ofertas.json        # configuração remota do painel de ofertas da extensão
-├── en/
-│   ├── index.html      # página principal (en)
-│   └── privacy.html    # política de privacidade (en)
-├── css/
-│   └── style.css       # folha de estilos (variáveis de tema no topo)
-└── img/                # pôster e banner (Open Graph)
-```
+### 📸 Region capture + AI vision
+Select an area of the page (or paste a screenshot with Ctrl+V) and ask the AI to analyse only that region. Powered by Groq's vision models.
 
-### Internacionalização
+---
 
-As versões pt-BR e en são páginas independentes ligadas por `hreflang`
-(`pt-BR`, `en`, `x-default`), permitindo que cada idioma seja indexado
-corretamente. A interface da extensão usa um dicionário próprio (`pt` / `en` / `es`)
-resolvido em tempo de execução pelo idioma do navegador.
+## Features
 
-### Configuração remota (`ofertas.json`)
+- **Pressure-sensitive pen** — adjustable thickness, colour and opacity with smoothed strokes.
+- **Highlighter** — mark passages without changing the original page DOM.
+- **Real screen capture** — export your annotations together with the visible page content as PNG.
+- **Smart autosave** — reload the page by accident? PenWeb offers to restore your drawing.
+- **Trilingual interface** — English, Portuguese and Spanish, auto-detected from your browser language.
+- **Accessible** — high-contrast mode, adjustable UI scale and `prefers-reduced-motion` support.
 
-O painel de ofertas exibido pela extensão é alimentado por este arquivo, servido
-pelo raw do GitHub. O fluxo no content script é:
+## Privacy first
 
-1. leitura do cache em `localStorage` (chave `penweb_ofertas_cache`, TTL de 6 h);
-2. se o cache estiver ausente ou expirado, `fetch` de `ofertas.json`;
-3. validação do payload (campos `emoji`, `texto`, `cta` e `link` com URL http/https);
-4. em caso de falha de rede ou payload inválido, mantém a lista embutida de fallback.
-
-Esse desenho permite atualizar o conteúdo do painel **sem publicar uma nova
-versão da extensão na loja**.
-
-## Privacidade
-
-Nenhuma coleta de dados pessoais, histórico ou conteúdo de páginas. As anotações
-vivem apenas no `localStorage` do dispositivo. Detalhes em
-[privacidade.html](https://thallyz.github.io/penweb/privacidade.html)
-([English](https://thallyz.github.io/penweb/en/privacy.html)).
+PenWeb **collects no personal data**. Your drawings are saved only in your browser's local storage. Nothing is sent to any server. [Read the full policy](https://thallyz.github.io/penweb/en/privacy.html).
 
 ## Roadmap
 
-- [ ] Chrome (Manifest V3) — em breve na Chrome Web Store
+- [x] Chrome (Manifest V3) — launching soon on Chrome Web Store
 - [ ] Edge Add-ons
 - [ ] Firefox
 - [ ] Safari
-- [ ] PenWeb AI — explicação de grifos, mapas mentais e flashcards (linha premium)
+- [ ] PenWeb AI — explain highlights, generate mind maps and flashcards (premium line)
 
-## Contribuições
+## About this repository
 
-Issues e pull requests são bem-vindos: correções de texto, traduções, acessibilidade
-e melhorias do site são os pontos de entrada mais úteis hoje. Para problemas da
-extensão, abra uma issue descrevendo navegador, versão e passos para reproduzir.
+This repo contains the **official website** (static HTML + CSS, hosted on GitHub Pages) and the **remote configuration** (`ofertas.json`) consumed by the extension.
 
-## Contato
+```
+penweb/
+├── index.html          # landing page (pt-BR)
+├── privacidade.html    # privacy policy (pt-BR)
+├── ofertas.json        # remote offer-panel config for the extension
+├── en/
+│   ├── index.html      # landing page (en)
+│   └── privacy.html    # privacy policy (en)
+├── css/
+│   └── style.css       # stylesheet (CSS custom properties at the top)
+└── img/                # poster and banner (Open Graph)
+```
+
+The PT-BR and EN pages are independent, linked by `hreflang` (`pt-BR`, `en`, `x-default`) for correct indexing. The extension UI uses its own dictionary (`pt` / `en` / `es`) resolved at runtime from the browser language.
+
+### Remote config (`ofertas.json`)
+
+The offer panel inside the extension is fed by this file. The content script flow:
+
+1. Read cache from `localStorage` (key `penweb_ofertas_cache`, 6-hour TTL).
+2. If cache is missing or expired, `fetch` from GitHub raw.
+3. Validate payload (`emoji`, `texto`, `cta`, `link` with http/https URL).
+4. On network failure or invalid payload, fall back to the embedded list.
+
+This lets us update the panel **without publishing a new extension version**.
+
+## Contributing
+
+Issues and pull requests are welcome — typo fixes, translations, accessibility and site improvements are the most useful entry points today. For extension bugs, please include browser, version and steps to reproduce.
+
+## Contact
 
 youthman95@gmail.com
 
 ---
 
 <details>
-<summary><strong>English</strong></summary>
+<summary><strong>Português</strong></summary>
 
-**Highlight, draw and annotate on any web page.** PenWeb is a Chrome extension
-(Manifest V3) that turns any page — video lectures, in-browser PDFs, handouts,
-articles — into a study whiteboard. Everything is processed and stored
-**locally in the user's browser**; no personal data is collected or transmitted.
+**Grife, desenhe e anote em qualquer página da web.** PenWeb é uma extensão para Chrome (Manifest V3) que transforma qualquer página — videoaulas, PDFs no navegador, apostilas, artigos — em um quadro de estudos. Tudo é processado e armazenado **localmente no seu navegador**; nenhum dado pessoal é coletado.
 
-This repository holds the official static website (GitHub Pages) and the remote
-configuration (`ofertas.json`) consumed by the extension, which is fetched with a
-6-hour `localStorage` cache and an embedded fallback so the offer panel can be
-updated without republishing the extension.
+Este repositório contém o **site oficial** (página estática, HTML + CSS puros, hospedada no GitHub Pages) e a **configuração remota** (`ofertas.json`) consumida pela extensão.
 
-Install: [Chrome Web Store — coming soon](https://chromewebstore.google.com/detail/penweb/mmbhcihaimenkcagobpnkopbhdcgpopd) ·
-Privacy: [policy](https://thallyz.github.io/penweb/en/privacy.html)
+Instalação: [Chrome Web Store — em breve](https://chromewebstore.google.com/detail/penweb/mmbhcihaimenkcagobpnkopbhdcgpopd) ·
+Privacidade: [política](https://thallyz.github.io/penweb/privacidade.html)
 
 </details>
