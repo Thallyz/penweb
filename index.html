@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="LitgWXQJBFKwQGhH9llvYbYs-LSUFCMw8rKqN-UMABU">
   <title>PenWeb — Extensão para grifar, desenhar e anotar em qualquer página da web</title>
-  <meta name="description" content="Extensão gratuita para Chrome: grife, desenhe e anote em qualquer página — PDFs, videoaulas e apostilas. Tudo local, sem conta. PT, EN e ES.">
+  <meta name="description" content="Extensão gratuita para Chrome: grife, desenhe e anote em qualquer página — PDFs, videoaulas e apostilas. Com IA para explicar, resumir e criar mapas mentais. Tudo local, sem conta. PT, EN e ES.">
 
   <!-- Open Graph / redes sociais -->
   <meta property="og:type" content="website">
@@ -30,7 +30,7 @@
     "applicationCategory": "EducationalApplication",
     "operatingSystem": "Chrome / Chromium",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL" },
-    "description": "Extensão para Chrome que permite grifar, desenhar e anotar em qualquer página da web.",
+    "description": "Extensão para Chrome que permite grifar, desenhar e anotar em qualquer página da web, com IA para explicar, resumir e gerar mapas mentais.",
     "url": "https://thallyz.github.io/penweb/",
     "downloadUrl": "https://chromewebstore.google.com/detail/penweb/mmbhcihaimenkcagobpnkopbhdcgpopd"
   }
@@ -47,14 +47,15 @@
       <nav aria-label="Navegação principal">
         <a href="#recursos">Recursos</a>
         <a href="#ia">PenWeb AI</a>
+        <a href="#novidade">Novidades</a>
         <a href="#parceiros">Parceiros</a>
         <a href="privacidade.html">Privacidade</a>
         <a class="lang" href="en/" lang="en" hreflang="en" title="Switch to English">EN</a>
       </nav>
       <a class="btn btn-primario btn-topo"
-         href="#recursos"
-         style="opacity:0.7;cursor:default;">
-        Em breve
+         href="https://chromewebstore.google.com/detail/penweb/mmbhcihaimenkcagobpnkopbhdcgpopd"
+         target="_blank" rel="noopener">
+        Instalar grátis
       </a>
     </div>
   </header>
@@ -63,7 +64,7 @@
   <section class="hero">
     <div class="container hero-inner">
       <div class="hero-texto">
-        <span class="badge">autosave confiável · PT/EN/ES</span>
+        <span class="badge">v1.6 · autosave confiável · PT/EN/ES</span>
         <h1>Sua navegação em um <span class="destaque">quadro criativo</span>.</h1>
         <p class="subtitulo">
           Grife textos, desenhe, faça anotações e salve seus estudos em
@@ -71,14 +72,16 @@
           apostilas, videoaulas. Tudo local, tudo seu, tudo grátis.
         </p>
         <div class="hero-ctas">
-          <span class="btn btn-primario" style="opacity:0.7;cursor:default;">
-            🚀 Em breve na Chrome Web Store
-          </span>
+          <a class="btn btn-primario"
+             href="https://chromewebstore.google.com/detail/penweb/mmbhcihaimenkcagobpnkopbhdcgpopd"
+             target="_blank" rel="noopener">
+            🚀 Instalar grátis na Chrome Web Store
+          </a>
           <a class="btn btn-fantasma" href="#recursos">Ver recursos</a>
         </div>
         <p class="hero-nota">Feito para estudantes, concurseiros e residentes de medicina.</p>
         <ul class="plataformas" aria-label="Disponibilidade por navegador">
-          <li>🔜 Chrome Web Store — lançamento em breve</li>
+          <li class="ok">✅ Chrome Web Store — disponível agora</li>
           <li>🔜 Edge Add-ons</li>
           <li>🔜 Firefox</li>
           <li>🔜 Safari</li>
@@ -87,6 +90,21 @@
       <div class="hero-imagem">
         <img src="img/poster.png" alt="Cartaz do PenWeb mostrando a ferramenta de desenho sobre uma página web" width="540" height="540" loading="eager">
       </div>
+    </div>
+  </section>
+
+  <!-- ===================== NOVIDADE EM BREVE (v1.7) ===================== -->
+  <section id="novidade" class="secao secao-escura">
+    <div class="container centro">
+      <span class="badge badge-ia">Próxima atualização · em breve</span>
+      <h2>Um botão <span class="destaque">✦</span> sempre ao seu lado</h2>
+      <p class="secao-sub">
+        A versão 1.7 chega em breve com o botão flutuante <strong>✦</strong>:
+        <strong>sempre visível</strong> em qualquer página — antes mesmo de ativar a extensão —
+        <strong>arrastável</strong> para onde você preferir e com persistência de posição.
+        Um clique abre o painel lateral; outro clique fecha. Simples assim.
+      </p>
+      <p class="hero-nota">Atualização gratuita para quem já tem o PenWeb instalado.</p>
     </div>
   </section>
 
@@ -126,7 +144,7 @@
           <h3>Acessível para todos</h3>
           <p>Modo alto contraste, escala de interface ajustável e respeito à preferência de movimento reduzido.</p>
         </article>
-              <article class="cartao">
+        <article class="cartao">
           <span class="cartao-icone" aria-hidden="true">〰️</span>
           <h3>Traço suave em tempo real</h3>
           <p>Ative ou desative a suavização direto na barra de ferramentas — o traço nasce liso enquanto você desenha, sem pós-processamento.</p>
@@ -141,6 +159,21 @@
           <h3>Recorte e pergunte à IA</h3>
           <p>Arraste para selecionar uma região da página (ou cole um print com Ctrl+V) e a IA analisa só aquela questão, diagrama ou texto.</p>
         </article>
+        <article class="cartao">
+          <span class="cartao-icone" aria-hidden="true">🤖</span>
+          <h3>IA que edita seu desenho</h3>
+          <p>Laço uma área do quadro e peça: "resolva esta conta", "pinte o resultado de vermelho", "faça um mapa mental disso". A IA escreve e desenha por você.</p>
+        </article>
+        <article class="cartao">
+          <span class="cartao-icone" aria-hidden="true">🎯</span>
+          <h3>Barra flutuante de atalhos</h3>
+          <p>Ferramentas, cores e espessura sempre à mão numa mini barra que acompanha a página — sem abrir menus.</p>
+        </article>
+        <article class="cartao">
+          <span class="cartao-icone" aria-hidden="true">🔑</span>
+          <h3>Sua chave, seu controle</h3>
+          <p>PenWeb AI funciona com a chave que você já tem: OpenRouter, Groq, DeepSeek, Ollama local ou Gemini. Nada passa pelos nossos servidores.</p>
+        </article>
       </div>
     </div>
   </section>
@@ -149,11 +182,11 @@
   <section id="ia" class="secao secao-escura">
     <div class="container ia-inner">
       <div class="ia-texto">
-        <span class="badge badge-ia">Em breve</span>
+        <span class="badge badge-ia">Novo na v1.6</span>
         <h2>PenWeb <span class="destaque">AI</span></h2>
         <p>
-          O próximo passo: transforme seus grifos em conhecimento ativo.
-          A linha premium do PenWeb vai usar inteligência artificial para:
+          Transforme seus grifos em conhecimento ativo. O PenWeb AI já está disponível:
+          escolha o provedor, use sua própria chave e estude com um assistente que enxerga a página.
         </p>
         <ul class="lista-ia">
           <li>🧠 <strong>Explicar qualquer grifo</strong> — selecione um trecho e receba uma explicação simples na hora.</li>
@@ -162,11 +195,11 @@
           <li>📝 <strong>Resumir páginas inteiras</strong> com foco no que você marcou.</li>
         </ul>
         <a class="btn btn-primario"
-           href="https://docs.google.com/forms/d/e/1FAIpQLSdpFt6QiUQgas3ZFGnHusciwl2RU0uWP3MwsT-x-jGPVzrclA/viewform"
+           href="https://chromewebstore.google.com/detail/penweb/mmbhcihaimenkcagobpnkopbhdcgpopd"
            target="_blank" rel="noopener">
-          Entrar na lista de espera
+          Experimentar o PenWeb AI
         </a>
-        <p class="hero-nota">Assinantes da lista de espera terão condições especiais no lançamento.</p>
+        <p class="hero-nota">Em breve: edição de desenho por voz e novos provedores de IA.</p>
       </div>
     </div>
   </section>
@@ -274,9 +307,9 @@
         <a href="privacidade.html">Leia a política completa</a>.
       </p>
       <a class="btn btn-primario btn-grande"
-         href="#recursos"
-         style="opacity:0.7;cursor:default;">
-        Em breve na Chrome Web Store
+         href="https://chromewebstore.google.com/detail/penweb/mmbhcihaimenkcagobpnkopbhdcgpopd"
+         target="_blank" rel="noopener">
+        Instalar grátis na Chrome Web Store
       </a>
     </div>
   </section>
@@ -295,7 +328,11 @@
       </details>
       <details>
         <summary>O PenWeb é grátis? Preciso criar conta?</summary>
-        <p>Será grátis e não pedirá conta, e-mail ou login. Assim que publicado na Chrome Web Store, é só instalar e usar na hora.</p>
+        <p>Sim, é grátis e não pede conta, e-mail ou login. É só instalar na Chrome Web Store e usar na hora.</p>
+      </details>
+      <details>
+        <summary>A IA do PenWeb custa caro?</summary>
+        <p>Não. O PenWeb AI usa a sua própria chave de API (OpenRouter, Groq, DeepSeek, Ollama local ou Gemini) — você paga direto ao provedor pelo que usar, e o Ollama local é 100% gratuito.</p>
       </details>
       <details>
         <summary>Meus desenhos são enviados para algum servidor?</summary>
@@ -323,7 +360,12 @@
       {
         "@type": "Question",
         "name": "O PenWeb é grátis? Preciso criar conta?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Será grátis e não pedirá conta, e-mail ou login. Assim que publicado na Chrome Web Store, é só instalar e usar na hora." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Sim, é grátis e não pede conta, e-mail ou login. É só instalar na Chrome Web Store e usar na hora." }
+      },
+      {
+        "@type": "Question",
+        "name": "A IA do PenWeb custa caro?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Não. O PenWeb AI usa a sua própria chave de API (OpenRouter, Groq, DeepSeek, Ollama local ou Gemini) — você paga direto ao provedor pelo que usar, e o Ollama local é 100% gratuito." }
       },
       {
         "@type": "Question",
