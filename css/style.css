@@ -356,3 +356,43 @@ h1, h2, h3 { line-height: 1.2; font-weight: 700; }
   * { transition: none !important; animation: none !important; }
   .btn:hover, .cartao:hover, .oferta:hover { transform: none; }
 }
+
+/* ===================== FORMULÁRIO VERSÃO BYOK ===================== */
+.form-acesso {
+  max-width: 480px;
+  margin: 28px auto 0;
+  display: grid;
+  gap: 14px;
+  text-align: left;
+}
+.form-acesso label {
+  display: grid;
+  gap: 6px;
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--texto-suave);
+}
+.form-acesso input,
+.form-acesso select,
+.form-acesso textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  background: var(--fundo-cartao);
+  color: var(--texto);
+  font-family: inherit;
+  font-size: .95rem;
+}
+.form-acesso textarea { min-height: 76px; resize: vertical; }
+.form-acesso input:focus-visible,
+.form-acesso select:focus-visible,
+.form-acesso textarea:focus-visible {
+  border-color: var(--primaria);
+  outline: 2px solid var(--primaria);
+  outline-offset: 1px;
+}
+.form-acesso .btn { justify-self: start; }
+.form-nota { font-size: .82rem; color: var(--texto-suave); margin-top: 16px; }
+.honey { display: none !important; }
+@media (max-width: 600px) { .form-acesso .btn { justify-self: stretch; } }
