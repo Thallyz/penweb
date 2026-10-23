@@ -17,7 +17,22 @@ roda com a sua chave funciona sem nenhum limite.
 - Chat com a página — texto, print colado e captura de região, com visão do seu desenho;
 - Resumo da página, mapa mental e flashcards gerados dos seus grifos;
 - Exportar anotação em PNG, autosave dos desenhos e painel lateral "Minhas marcações";
-- IA via **OpenRouter** com a sua chave (a chave fica só no seu navegador).
+- IA via **OpenRouter** com a sua chave (a chave fica só no seu navegador);
+- Modelo automático por tarefa e opção de fixar modelos diferentes para texto e imagens;
+- Indicação visual do provedor e do modelo que realmente responderam;
+- Remoção de grifos direto na página: selecione o trecho grifado e toque na lixeira;
+- Apoio ao projeto por Pix ou cartão Mercado Pago — as duas opções são para o Brasil.
+
+**Correções e desempenho desta atualização:**
+
+- Uma chave OpenRouter nova é validada pela própria conta, sem depender do modelo fixado;
+- Chaves expiradas são detectadas e removidas, deixando o painel pronto para a substituição;
+- Todos os botões de IA voltam a reconhecer imediatamente a chave nova;
+- Modelo fixo que o provedor removeu não trava mais o chat: o PenWeb desafixa sozinho e responde no automático;
+- O painel lateral respeita integralmente o idioma escolhido, inclusive modelos e configurações;
+- Respostas de IA desistem mais rápido de provedores sobrecarregados e usam alternativas disponíveis;
+- A caneta continua fluida em páginas dinâmicas: mudanças sem grifos não disparam varreduras de texto;
+- Erros internos do provedor não vazam em inglês nem travam os controles.
 
 **Marcado como "Em breve" no painel:**
 
@@ -50,6 +65,15 @@ sem depender do site estar no ar.
 ### ☁️ Sincronizar
 Os seus grifos e desenhos em todos os seus dispositivos.
 
+### 🧭 Mapas mentais visuais
+Mapas com desenhos, setas e cores, prontos para revisar e compartilhar.
+
+### 📊 Gerador de apresentações
+Slides criados a partir dos seus grifos, resumos e páginas salvas.
+
+### 💻 Assistente de código
+Explicar, revisar e gerar código sem sair da página, usando o mesmo modelo por tarefa.
+
 ### Nossa promessa: BYOK ilimitado, para sempre
 Quem conecta a própria chave **nunca** vai ter limite de créditos no PenWeb. Os limites
 existem apenas na IA hospedada por nós, porque ali cada resposta sai do nosso bolso.
@@ -72,13 +96,26 @@ A versão **traga a sua própria chave**: conecte a sua chave OpenRouter e use a
 - Caneta com pressão, marca-texto, laço e borracha sobre qualquer site
 - Chat com a página (texto, print colado e captura de região, com visão do desenho)
 - Resumo, mapa mental e flashcards gerados dos seus grifos
+- Modelo automático por tarefa, fixação separada para texto/imagens e indicador do modelo real
+- Remoção de grifos direto na página, sem precisar abrir o painel lateral
 - Exportar em PNG, autosave e painel lateral "Minhas marcações"
+
+### Correções desta compilação
+- Chave OpenRouter nova validada sem depender do modelo selecionado
+- Chave expirada detectada e limpa para permitir a substituição imediata
+- Botões Explicar, Resumir, Mapa mental e Flashcards reconhecem a chave nova
+- Modelo fixo removido pelo provedor não trava o chat — desafixa sozinho e responde
+- Painel lateral totalmente traduzido, inclusive modelos e configurações
+- Menos latência nas falhas de IA e menos varreduras em páginas dinâmicas
 
 ### Em breve (próxima grande atualização)
 - ✦ **PenWeb AI** — IA sem chave, com créditos grátis todo dia
 - 🌐 **Traduzir página**
 - 💾 **Salvar página** em PDF/imagem com as suas anotações
 - ☁️ **Sincronizar** entre dispositivos
+- 🧭 **Mapas mentais visuais**
+- 📊 **Gerador de apresentações**
+- 💻 **Assistente de código**
 
 ### Promessa
 Quem usa chave própria nunca terá limite de créditos no PenWeb. Limites valem apenas
