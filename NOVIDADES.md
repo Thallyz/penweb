@@ -29,7 +29,9 @@ roda com a sua chave funciona sem nenhum limite.
 - Chaves expiradas são detectadas e removidas, deixando o painel pronto para a substituição;
 - Todos os botões de IA voltam a reconhecer imediatamente a chave nova;
 - Modelo fixo que o provedor removeu não trava mais o chat: o PenWeb desafixa sozinho e responde no automático;
+- O modo **Automático** testa uma cadeia de modelos: pula na hora os que a conta não roteia (404), lembra o que respondeu para a próxima pergunta e mostra "usando X agora" na ficha;
 - O painel lateral respeita integralmente o idioma escolhido, inclusive modelos e configurações;
+- O aviso de limite de tokens aparece inteiro, com os botões de migração acessíveis, sem cobrir as configurações;
 - Respostas de IA desistem mais rápido de provedores sobrecarregados e usam alternativas disponíveis;
 - A caneta continua fluida em páginas dinâmicas: mudanças sem grifos não disparam varreduras de texto;
 - Erros internos do provedor não vazam em inglês nem travam os controles.
@@ -105,7 +107,9 @@ A versão **traga a sua própria chave**: conecte a sua chave OpenRouter e use a
 - Chave expirada detectada e limpa para permitir a substituição imediata
 - Botões Explicar, Resumir, Mapa mental e Flashcards reconhecem a chave nova
 - Modelo fixo removido pelo provedor não trava o chat — desafixa sozinho e responde
+- Modo Automático testa uma cadeia de modelos, ignora os recusados pelo OpenRouter e lembra o que funcionou
 - Painel lateral totalmente traduzido, inclusive modelos e configurações
+- Aviso de limite de tokens inteiro e com botões acessíveis, sem cortar as configurações
 - Menos latência nas falhas de IA e menos varreduras em páginas dinâmicas
 
 ### Em breve (próxima grande atualização)
