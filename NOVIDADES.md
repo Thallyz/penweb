@@ -45,7 +45,7 @@ roda com a sua chave funciona sem nenhum limite.
 
 **Acesso à 1.5.5 depois do lançamento da próxima versão:** formulário em
 [thallyz.github.io/penweb/#acesso](https://thallyz.github.io/penweb/#acesso)
-(inglês: [#byok](https://thallyz.github.io/penweb/en/#byok)).
+(inglês: [#access](https://thallyz.github.io/penweb/en/#access)).
 
 ---
 
@@ -126,7 +126,7 @@ Quem usa chave própria nunca terá limite de créditos no PenWeb. Limites valem
 para a IA hospedada por nós.
 
 Quer a 1.5.5 mesmo depois do lançamento da próxima versão?
-Deixe seu e-mail em https://thallyz.github.io/penweb/#acesso (EN: /en/#byok).
+Deixe seu e-mail em https://thallyz.github.io/penweb/#acesso (EN: /en/#access).
 ```
 
 ---
@@ -134,4 +134,4 @@ Deixe seu e-mail em https://thallyz.github.io/penweb/#acesso (EN: /en/#byok).
 *Interno (não publicar): os números de créditos grátis da IA hospedada ainda não estão
 fechados — decidir antes de anunciar a versão escalada. Ativação do FormSubmit: a
 primeira submissão do formulário envia um e-mail de confirmação para
-penweb.suporte@gmail.com; é preciso clicar uma vez para o formulário passar a entregar.*
+dwlabs.penweb@gmail.com; é preciso clicar uma vez para o formulário passar a entregar.*

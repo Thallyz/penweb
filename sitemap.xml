@@ -5,20 +5,24 @@
     <loc>https://thallyz.github.io/penweb/</loc>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://thallyz.github.io/penweb/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thallyz.github.io/penweb/en/"/>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
     <loc>https://thallyz.github.io/penweb/en/</loc>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://thallyz.github.io/penweb/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://thallyz.github.io/penweb/en/"/>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
     <loc>https://thallyz.github.io/penweb/privacidade.html</loc>
-    <lastmod>2026-09-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://thallyz.github.io/penweb/privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thallyz.github.io/penweb/en/privacy.html"/>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
     <loc>https://thallyz.github.io/penweb/en/privacy.html</loc>
-    <lastmod>2026-09-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://thallyz.github.io/penweb/privacidade.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thallyz.github.io/penweb/en/privacy.html"/>
+    <lastmod>2026-10-30</lastmod>
   </url>
 </urlset>

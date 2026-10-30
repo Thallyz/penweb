@@ -4,467 +4,322 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="LitgWXQJBFKwQGhH9llvYbYs-LSUFCMw8rKqN-UMABU">
-  <title>PenWeb — Extensão para grifar, desenhar e anotar em qualquer página da web</title>
-  <meta name="description" content="Extensão gratuita para Chrome: grife, desenhe e anote em qualquer página — PDFs, videoaulas e apostilas. Com IA para explicar, resumir e criar mapas mentais. Tudo local, sem conta. PT, EN e ES.">
-
-  <!-- Open Graph / redes sociais -->
+  <title>PenWeb — Caneta, grifos e IA para estudar na web</title>
+  <meta name="description" content="Extensão gratuita para Chrome: grife, desenhe e pergunte à IA em qualquer página, PDF ou videoaula. Resumos, flashcards e mapas mentais editáveis com a sua chave.">
+  <link rel="canonical" href="https://thallyz.github.io/penweb/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="PenWeb — Sua navegação em um quadro criativo">
-  <meta property="og:description" content="Grife, anote e estude em qualquer página da web. Grátis na Chrome Web Store.">
-  <meta property="og:image" content="img/banner.png">
+  <meta property="og:description" content="Grife, desenhe e estude em qualquer página com a sua própria chave de IA. Grátis na Chrome Web Store.">
+  <meta property="og:image" content="https://thallyz.github.io/penweb/img/editor-mapa.png">
   <meta property="og:url" content="https://thallyz.github.io/penweb/">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="alternate" hreflang="pt-BR" href="https://thallyz.github.io/penweb/">
   <link rel="alternate" hreflang="en" href="https://thallyz.github.io/penweb/en/">
   <link rel="alternate" hreflang="x-default" href="https://thallyz.github.io/penweb/">
-
   <link rel="icon" type="image/png" href="img/icon-128.png">
   <link rel="stylesheet" href="css/style.css">
-
-  <!-- Dados estruturados (Google) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "PenWeb",
-    "applicationCategory": "EducationalApplication",
-    "operatingSystem": "Chrome / Chromium",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL" },
-    "description": "Extensão para Chrome que permite grifar, desenhar e anotar em qualquer página da web, com IA para explicar, resumir e gerar mapas mentais.",
-    "url": "https://thallyz.github.io/penweb/",
-    "downloadUrl": "https://chromewebstore.google.com/detail/penweb/mmbhcihaimenkcagobpnkopbhdcgpopd"
-  }
-  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"PenWeb","applicationCategory":"EducationalApplication","operatingSystem":"Chrome / Chromium","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"},"description":"Extensão para Chrome que permite grifar, desenhar e anotar em qualquer página da web, com IA para explicar, resumir e gerar mapas mentais.","inLanguage":"pt-BR","url":"https://thallyz.github.io/penweb/","downloadUrl":"https://chromewebstore.google.com/detail/penweb/mmbhcihaimenkcagobpnkopbhdcgpopd"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"pt-BR","mainEntity":[{"@type":"Question","name":"Como grifar PDFs e videoaulas no navegador?","acceptedAnswer":{"@type":"Answer","text":"Abra o PDF ou a videoaula no Chrome, ative o PenWeb e use o marca-texto ou a caneta diretamente sobre a página, sem alterar o arquivo original."}},{"@type":"Question","name":"Dá para anotar em qualquer site, inclusive YouTube?","acceptedAnswer":{"@type":"Answer","text":"Sim. O PenWeb desenha uma camada sobre a página atual: funciona em artigos, apostilas online, plataformas de curso e videoaulas no YouTube."}},{"@type":"Question","name":"O PenWeb é grátis? Preciso criar conta?","acceptedAnswer":{"@type":"Answer","text":"Sim, é grátis e não pede conta, e-mail ou login. É só instalar na Chrome Web Store e usar na hora."}},{"@type":"Question","name":"A IA do PenWeb custa caro?","acceptedAnswer":{"@type":"Answer","text":"Não. O PenWeb usa a sua própria chave de API (OpenRouter, Gemini ou Groq). Você paga direto ao provedor pelo que usar — sem assinatura da PenWeb."}},{"@type":"Question","name":"Meus desenhos são enviados para algum servidor?","acceptedAnswer":{"@type":"Answer","text":"Não. Desenhos, grifos e mapas ficam no armazenamento do seu navegador. Quando você aciona uma ação de IA, apenas o texto necessário é enviado ao provedor configurado por você."}}]}</script>
 </head>
 <body>
 
-  <!-- ===================== CABEÇALHO ===================== -->
-  <header class="topo">
-    <div class="container topo-inner">
-      <a href="#" class="logo" aria-label="PenWeb — início" translate="no">
-        <span class="logo-pen" aria-hidden="true">✏️</span> Pen<strong>Web</strong>
-      </a>
-      <nav aria-label="Navegação principal">
-        <a href="#recursos">Recursos</a>
-        <a href="#ia">PenWeb AI</a>
-        <a href="#novidade">Novidades</a>
-        <a href="#acesso">BYOK Final</a>
-        <a href="#parceiros">Parceiros</a>
-        <a href="privacidade.html">Privacidade</a>
-        <a class="lang" href="en/" lang="en" hreflang="en" title="Switch to English">EN</a>
-      </nav>
-      <a class="btn btn-primario btn-topo"
-         href="https://chromewebstore.google.com/detail/penweb/mmbhcihaimenkcagobpnkopbhdcgpopd"
-         target="_blank" rel="noopener">
-        Instalar grátis
-      </a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="./" aria-label="PenWeb — início">
+      <img src="img/icon-128.png" alt="">
+      <div><b>PenWeb</b><span>by DWLabs</span></div>
+    </a>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#recursos">Recursos</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#privacidade">Privacidade</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="header-actions">
+      <a class="lang" href="en/" lang="en" hreflang="en" title="Switch to English">EN</a>
+      <a class="btn btn-gold header-cta" href="https://chromewebstore.google.com/detail/penweb/mmbhcihaimenkcagobpnkopbhdcgpopd" target="_blank" rel="noopener">Instalar grátis <span class="arrow">↗</span></a>
     </div>
-  </header>
+  </div>
+</header>
 
-  <!-- ===================== HERO ===================== -->
+<main>
   <section class="hero">
-    <div class="container hero-inner">
-      <div class="hero-texto">
-        <span class="badge">v1.6 · autosave confiável · PT/EN/ES</span>
-        <h1>Sua navegação em um <span class="destaque">quadro criativo</span>.</h1>
-        <p class="subtitulo">
-          Grife textos, desenhe, faça anotações e salve seus estudos em
-          <strong>qualquer página da web</strong> — YouTube, PDFs no navegador,
-          apostilas, videoaulas. Tudo local, tudo seu, tudo grátis.
-        </p>
-        <div class="hero-ctas">
-          <a class="btn btn-primario"
-             href="https://chromewebstore.google.com/detail/penweb/mmbhcihaimenkcagobpnkopbhdcgpopd"
-             target="_blank" rel="noopener">
-            🚀 Instalar grátis na Chrome Web Store
-          </a>
-          <a class="btn btn-fantasma" href="#recursos">Ver recursos</a>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">v1.6 · caneta, grifos e IA no navegador</span>
+        <h1>Sua navegação em um <em>quadro criativo.</em></h1>
+        <p class="hero-sub">Grife, desenhe e pergunte em <b>qualquer página, PDF ou videoaula</b>. A IA usa o seu material como contexto para explicar, resumir, criar flashcards e mapas mentais — com a sua chave, direto no painel.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="https://chromewebstore.google.com/detail/penweb/mmbhcihaimenkcagobpnkopbhdcgpopd" target="_blank" rel="noopener">Instalar grátis na Chrome Web Store <span class="arrow">↗</span></a>
+          <a class="btn btn-ghost" href="#recursos">Ver recursos <span class="arrow">↓</span></a>
         </div>
-        <p class="hero-nota">Feito para estudantes, concurseiros e residentes de medicina.</p>
-        <ul class="plataformas" aria-label="Disponibilidade por navegador">
-          <li class="ok">✅ Chrome Web Store — disponível agora</li>
-          <li>🔜 Edge Add-ons</li>
-          <li>🔜 Firefox</li>
-          <li>🔜 Safari</li>
-        </ul>
+        <p class="hero-note"><b>Grátis, sem conta.</b> Feito para estudantes, concurseiros e residentes de medicina.</p>
+        <div class="proof-row">
+          <span class="proof"><i></i><span class="stars">★★★★★</span> <b>5,0</b> na Chrome Web Store</span>
+          <span class="proof"><i></i><b>3 idiomas</b> · PT, EN e ES</span>
+          <span class="proof"><i></i><b>BYOK</b> · a chave fica com você</span>
+        </div>
       </div>
-      <div class="hero-imagem">
-        <img src="img/poster.png" alt="Cartaz do PenWeb mostrando a ferramenta de desenho sobre uma página web" width="540" height="540" loading="eager">
+      <div class="hero-stage" aria-label="Prévia do editor de mapas e do painel PenWeb">
+        <div class="hero-glow"></div>
+        <img class="float-toolbar" src="img/toolbar.png" alt="Barra de canetas do PenWeb">
+        <div class="browser-window">
+          <div class="browser-bar"><i></i><i></i><i></i><span>editor-mapa.html · PenWeb</span></div>
+          <img src="img/editor-mapa.png" alt="Editor de mapa mental do PenWeb">
+        </div>
+        <div class="sidepanel-card"><img src="img/sidepanel-chat.png" alt="Painel lateral do PenWeb com chat"></div>
+        <div class="hero-tag"><i></i>4 pontas · pressão · editor em aba</div>
+        <div class="hero-badge"><b>Mapa mental · Planeta Terra</b><span>posições salvas · export PNG</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== NOVIDADE EM BREVE (v1.7) ===================== -->
-  <section id="novidade" class="secao secao-escura">
-    <div class="container centro">
-      <span class="badge badge-ia">Próxima atualização · em breve</span>
-      <h2>Um botão <span class="destaque">✦</span> sempre ao seu lado</h2>
-      <p class="secao-sub">
-        A versão 1.7 chega em breve com o botão flutuante <strong>✦</strong>:
-        <strong>sempre visível</strong> em qualquer página — antes mesmo de ativar a extensão —
-        <strong>arrastável</strong> para onde você preferir e com persistência de posição.
-        Um clique abre o painel lateral; outro clique fecha. Simples assim.
-      </p>
-      <p class="hero-nota">Atualização gratuita para quem já tem o PenWeb instalado.</p>
+  <div class="trust">
+    <div class="container trust-inner">
+      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z"/></svg><span><b>5,0</b> de avaliação</span></div>
+      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M12 7v5l3 2"/></svg><span><b>24</b> usuários estudando</span></div>
+      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h16v14H4z"/><path d="M4 9h16M8 14h5"/></svg><span>Chrome Web Store · <b>disponível agora</b></span></div>
+      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 11V8a5 5 0 0 1 10 0v3"/><rect x="5" y="11" width="14" height="10" rx="2"/></svg><span><b>Privado</b> por padrão</span></div>
     </div>
-  </section>
+  </div>
 
-  <!-- ===================== RECURSOS ===================== -->
-  <section id="recursos" class="secao">
+  <section class="section" id="recursos">
     <div class="container">
-      <h2>Tudo o que você precisa para estudar na web</h2>
-      <p class="secao-sub">Um clique no ícone e a página vira seu caderno.</p>
-      <div class="grade-recursos">
-        <article class="cartao">
-          <span class="cartao-icone" aria-hidden="true">🖊️</span>
-          <h3>Caneta profissional</h3>
-          <p>Traço suave com pressão, espessura e cores ajustáveis. Desenhe e grife com precisão sobre qualquer site.</p>
-        </article>
-        <article class="cartao">
-          <span class="cartao-icone" aria-hidden="true">🔦</span>
-          <h3>Marca-texto</h3>
-          <p>Destaque trechos importantes de videoaulas, apostilas online e artigos sem alterar a página original.</p>
-        </article>
-        <article class="cartao">
-          <span class="cartao-icone" aria-hidden="true">📸</span>
-          <h3>Captura da tela real</h3>
-          <p>Salve sua anotação junto com o conteúdo da página em PNG — perfeito para revisões e flashcards.</p>
-        </article>
-        <article class="cartao">
-          <span class="cartao-icone" aria-hidden="true">💾</span>
-          <h3>Autosave inteligente</h3>
-          <p>Recarregou a página sem querer? O PenWeb oferece restaurar seu desenho automaticamente.</p>
-        </article>
-        <article class="cartao">
-          <span class="cartao-icone" aria-hidden="true">🌎</span>
-          <h3>Trilíngue</h3>
-          <p>Interface em português, inglês e espanhol, detectada automaticamente pelo idioma do seu navegador.</p>
-        </article>
-        <article class="cartao">
-          <span class="cartao-icone" aria-hidden="true">♿</span>
-          <h3>Acessível para todos</h3>
-          <p>Modo alto contraste, escala de interface ajustável e respeito à preferência de movimento reduzido.</p>
-        </article>
-        <article class="cartao">
-          <span class="cartao-icone" aria-hidden="true">〰️</span>
-          <h3>Traço suave em tempo real</h3>
-          <p>Ative ou desative a suavização direto na barra de ferramentas — o traço nasce liso enquanto você desenha, sem pós-processamento.</p>
-        </article>
-        <article class="cartao">
-          <span class="cartao-icone" aria-hidden="true">🧮</span>
-          <h3>Matemática e código legíveis</h3>
-          <p>Respostas da IA com frações reais, subscritos e expoentes — como num chat de IA de verdade. Copie qualquer bloco com um clique.</p>
-        </article>
-        <article class="cartao">
-          <span class="cartao-icone" aria-hidden="true">📸</span>
-          <h3>Recorte e pergunte à IA</h3>
-          <p>Arraste para selecionar uma região da página (ou cole um print com Ctrl+V) e a IA analisa só aquela questão, diagrama ou texto.</p>
-        </article>
-        <article class="cartao">
-          <span class="cartao-icone" aria-hidden="true">🤖</span>
-          <h3>IA que edita seu desenho</h3>
-          <p>Laço uma área do quadro e peça: "resolva esta conta", "pinte o resultado de vermelho", "faça um mapa mental disso". A IA escreve e desenha por você.</p>
-        </article>
-        <article class="cartao">
-          <span class="cartao-icone" aria-hidden="true">🎯</span>
-          <h3>Barra flutuante de atalhos</h3>
-          <p>Ferramentas, cores e espessura sempre à mão numa mini barra que acompanha a página — sem abrir menus.</p>
-        </article>
-        <article class="cartao">
-          <span class="cartao-icone" aria-hidden="true">🔑</span>
-          <h3>Sua chave, seu controle</h3>
-          <p>PenWeb AI funciona com a chave que você já tem: OpenRouter, Groq, DeepSeek, Ollama local ou Gemini. Nada passa pelos nossos servidores.</p>
-        </article>
+      <div class="section-head">
+        <div class="section-head-copy">
+          <span class="eyebrow">Um só lugar</span>
+          <h2>Tudo o que você precisa para <span class="gold">estudar na web.</span></h2>
+          <p>Caneta, grifos e IA trabalham juntos no painel lateral. Sem trocar de app, sem perder o contexto.</p>
+        </div>
+        <p class="side-note">Feito com a mesma base da extensão: local, sob seu controle e sem assinatura.</p>
+      </div>
+
+      <div class="feature-shell">
+        <div class="feature-tabs" role="tablist" aria-label="Recursos do PenWeb">
+          <button class="feature-tab" role="tab" aria-selected="true" aria-controls="panel-pen" id="tab-pen" data-tab="pen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 20l4-1 10-10a2 2 0 0 0-3-3L5 16l-1 4Z"/><path d="m13 6 4 4"/></svg> Caneta e grifos</button>
+          <button class="feature-tab" role="tab" aria-selected="false" aria-controls="panel-chat" id="tab-chat" data-tab="chat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h16v11H9l-5 4V5Z"/></svg> Chat com a página</button>
+          <button class="feature-tab" role="tab" aria-selected="false" aria-controls="panel-map" id="tab-map" data-tab="map"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v5m0 8v5M3 12h5m8 0h5"/><circle cx="12" cy="12" r="3"/></svg> Mapas editáveis</button>
+          <button class="feature-tab" role="tab" aria-selected="false" aria-controls="panel-flash" id="tab-flash" data-tab="flash"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 10h8M8 14h5"/></svg> Flashcards e resumos</button>
+        </div>
+
+        <div class="feature-panel active" id="panel-pen" role="tabpanel" aria-labelledby="tab-pen">
+          <div class="feature-copy">
+            <span class="eyebrow">Traço de verdade</span>
+            <h3>Uma caneta que acompanha o seu ritmo.</h3>
+            <p>Pressão, quatro pontas e marca-texto translúcido direto sobre a página. O traço acompanha a mesa digitalizadora e não interrompe a leitura.</p>
+            <ul>
+              <li>4 pontas: esferográfica, nanquim, pena e pincel</li>
+              <li>Marca-texto com opacidade ajustável</li>
+              <li>Barra flutuante com atalhos Alt+1 a Alt+5</li>
+            </ul>
+            <a class="mini-link" href="#faq">Ver perguntas sobre a caneta <span class="arrow">→</span></a>
+          </div>
+          <div class="feature-visual">
+            <div class="page-mock">
+              <img class="toolbar-shot" src="img/toolbar.png" alt="Barra flutuante de ferramentas do PenWeb">
+              <div class="kicker">Biologia celular · capítulo 4</div>
+              <h4>A célula por dentro</h4>
+              <div class="rule"></div>
+              <p>A célula é a unidade básica da vida. A <mark>membrana plasmática</mark> controla o que entra e sai, enquanto as mitocôndrias transformam energia e o núcleo guarda a informação genética.</p>
+              <div class="quote">“A célula é a menor unidade capaz de realizar todas as funções vitais.”</div>
+              <span class="ask">Perguntar à IA ↵</span>
+              <div class="pen-note"><b>Seu grifo</b>membrana = fronteira seletiva<br>revisar transporte ativo</div>
+              <svg class="pen-stroke" viewBox="0 0 220 50"><path d="M4 38 C 50 42, 82 28, 124 34 S 182 22, 216 28"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-panel" id="panel-chat" role="tabpanel" aria-labelledby="tab-chat" hidden>
+          <div class="feature-copy">
+            <span class="eyebrow">Contexto da página</span>
+            <h3>Pergunte sem sair do que está lendo.</h3>
+            <p>O chat recebe o texto da página e os seus grifos como contexto. Peça uma explicação, um resumo ou uma comparação — a resposta fica ao lado do material.</p>
+            <ul>
+              <li>Explicações com o contexto da leitura</li>
+              <li>Resumo e flashcards a partir da página</li>
+              <li>OpenRouter, Gemini e Groq com a sua chave</li>
+            </ul>
+            <a class="mini-link" href="#faq">Como funciona a IA <span class="arrow">→</span></a>
+          </div>
+          <div class="feature-visual">
+            <div class="ui-frame"><img src="img/sidepanel-chat.png" alt="Chat do PenWeb com a página"><div class="ui-caption"><b>Chat com a página</b><span>contexto dos seus grifos</span></div></div>
+          </div>
+        </div>
+
+        <div class="feature-panel" id="panel-map" role="tabpanel" aria-labelledby="tab-map" hidden>
+          <div class="feature-copy">
+            <span class="eyebrow">Editor em aba</span>
+            <h3>Mapas que você edita de verdade.</h3>
+            <p>Abra o mapa em uma aba, arraste os blocos, use Shift para mover a subárvore e Ctrl + roda para dar zoom. O layout fica do seu jeito — e as posições são salvas.</p>
+            <ul>
+              <li>Arraste, reorganize e renomeie nós</li>
+              <li>Zoom no ponto do mouse</li>
+              <li>Exportação PNG em um clique</li>
+            </ul>
+            <a class="mini-link" href="https://chromewebstore.google.com/detail/penweb/mmbhcihaimenkcagobpnkopbhdcgpopd" target="_blank" rel="noopener">Instalar grátis e abrir o editor <span class="arrow">↗</span></a>
+          </div>
+          <div class="feature-visual">
+            <div class="ui-frame"><img src="img/editor-mapa.png" alt="Editor de mapa mental do PenWeb"><div class="ui-caption"><b>Mapa mental · Planeta Terra</b><span>posições salvas · PNG</span></div></div>
+          </div>
+        </div>
+
+        <div class="feature-panel" id="panel-flash" role="tabpanel" aria-labelledby="tab-flash" hidden>
+          <div class="feature-copy">
+            <span class="eyebrow">Revisão ativa</span>
+            <h3>Do grifo à pergunta, sem montar nada do zero.</h3>
+            <p>Transforme o material em flashcards e resumos. A IA escreve as perguntas; você decide quando virar a carta e o que revisar de novo.</p>
+            <ul>
+              <li>Flashcards com frente e verso</li>
+              <li>Resumo com a ideia central e bullets</li>
+              <li>Tudo no mesmo painel de estudo</li>
+            </ul>
+            <a class="mini-link" href="#faq">Ver dicas de revisão <span class="arrow">→</span></a>
+          </div>
+          <div class="feature-visual">
+            <div class="ui-frame"><img src="img/sidepanel-flashcards.png" alt="Flashcards do PenWeb"><div class="ui-caption"><b>Flashcards</b><span>3 cartas · revisão ativa</span></div></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== PENWEB AI ===================== -->
-  <section id="ia" class="secao secao-escura">
-    <div class="container ia-inner">
-      <div class="ia-texto">
-        <span class="badge badge-ia">Novo na v1.6</span>
-        <h2>PenWeb <span class="destaque">AI</span></h2>
-        <p>
-          Transforme seus grifos em conhecimento ativo. O PenWeb AI já está disponível:
-          escolha o provedor, use sua própria chave e estude com um assistente que enxerga a página.
-        </p>
-        <ul class="lista-ia">
-          <li>🧠 <strong>Explicar qualquer grifo</strong> — selecione um trecho e receba uma explicação simples na hora.</li>
-          <li>🗺️ <strong>Gerar mapas mentais</strong> a partir dos seus destaques em videoaulas e apostilas.</li>
-          <li>🃏 <strong>Criar flashcards</strong> automaticamente para revisão espaçada.</li>
-          <li>📝 <strong>Resumir páginas inteiras</strong> com foco no que você marcou.</li>
-        </ul>
-        <a class="btn btn-primario"
-           href="https://chromewebstore.google.com/detail/penweb/mmbhcihaimenkcagobpnkopbhdcgpopd"
-           target="_blank" rel="noopener">
-          Experimentar o PenWeb AI
-        </a>
-        <p class="hero-nota">Em breve: edição de desenho por voz e novos provedores de IA.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== PARCEIROS COMERCIAIS (AFILIADOS) ===================== -->
-  <section id="parceiros" class="secao">
+  <section class="section" id="como-funciona">
     <div class="container">
-      <h2>Parceiros comerciais</h2>
-      <p class="secao-sub">
-        Produtos que combinam com quem estuda online — e com a vida fora dela.
-        <em>Divulgação: os links abaixo são de afiliado — se você comprar por eles,
-        o PenWeb recebe uma pequena comissão sem custo extra para você. Isso ajuda a
-        manter a extensão gratuita. São apenas sugestões: ninguém precisa comprar nada.</em>
-      </p>
-      <div class="grade-ofertas">
-        <a class="oferta" href="https://meli.la/1jJF2az" target="_blank" rel="noopener sponsored">
-          <span class="oferta-icone" aria-hidden="true">🖨️</span>
-          <h3>Impressora multifuncional</h3>
-          <p>Imprima seus resumos e capturas do PenWeb.</p>
-          <span class="oferta-cta">Ver oferta →</span>
-        </a>
-        <a class="oferta" href="https://meli.la/2JVefme" target="_blank" rel="noopener sponsored">
-          <span class="oferta-icone" aria-hidden="true">💪</span>
-          <h3>Creatina</h3>
-          <p>Foco e energia para as sessões de estudo longas.</p>
-          <span class="oferta-cta">Ver oferta →</span>
-        </a>
-        <a class="oferta" href="https://meli.la/14F6ckz" target="_blank" rel="noopener sponsored">
-          <span class="oferta-icone" aria-hidden="true">🚲</span>
-          <h3>Bicicleta ergométrica</h3>
-          <p>Estude e se movimente ao mesmo tempo.</p>
-          <span class="oferta-cta">Ver oferta →</span>
-        </a>
-        <a class="oferta" href="https://meli.la/2wqeHNj" target="_blank" rel="noopener sponsored">
-          <span class="oferta-icone" aria-hidden="true">🍳</span>
-          <h3>Jogo de panelas antiaderente</h3>
-          <p>Cerâmica, 5 peças — cozinha prática pra quem mora sozinho.</p>
-          <span class="oferta-cta">Ver oferta →</span>
-        </a>
-        <a class="oferta" href="https://meli.la/2VDWRpG" target="_blank" rel="noopener sponsored">
-          <span class="oferta-icone" aria-hidden="true">🩳</span>
-          <h3>Kit cuecas boxer infantil</h3>
-          <p>Microfibra sem costura, kit com 12 unidades.</p>
-          <span class="oferta-cta">Ver oferta →</span>
-        </a>
-        <a class="oferta" href="https://meli.la/1z9NSv5" target="_blank" rel="noopener sponsored">
-          <span class="oferta-icone" aria-hidden="true">📱</span>
-          <h3>iPhone 17 Pro Max 512GB</h3>
-          <p>Distribuidor autorizado.</p>
-          <span class="oferta-cta">Ver oferta →</span>
-        </a>
-        <a class="oferta" href="https://meli.la/1oN7WaF" target="_blank" rel="noopener sponsored">
-          <span class="oferta-icone" aria-hidden="true">📺</span>
-          <h3>Smart TV Philco 43" Full HD</h3>
-          <p>Roku TV, HDR10, Dolby Audio.</p>
-          <span class="oferta-cta">Ver oferta →</span>
-        </a>
-        <a class="oferta" href="https://meli.la/1FCchKR" target="_blank" rel="noopener sponsored">
-          <span class="oferta-icone" aria-hidden="true">🎮</span>
-          <h3>PlayStation 5 Pro 2TB</h3>
-          <p>A pausa merecida entre um bloco de questões e outro.</p>
-          <span class="oferta-cta">Ver oferta →</span>
-        </a>
-        <a class="oferta" href="https://meli.la/23gSGkk" target="_blank" rel="noopener sponsored">
-          <span class="oferta-icone" aria-hidden="true">📺</span>
-          <h3>Smart TV TCL 85" QLED 4K</h3>
-          <p>Google TV, HDR10+, Dolby Atmos.</p>
-          <span class="oferta-cta">Ver oferta →</span>
-        </a>
-        <a class="oferta" href="https://meli.la/1JwRPJm" target="_blank" rel="noopener sponsored">
-          <span class="oferta-icone" aria-hidden="true">📱</span>
-          <h3>Samsung Galaxy S25 Ultra</h3>
-          <p>256GB, 5G, câmera quádrupla.</p>
-          <span class="oferta-cta">Ver oferta →</span>
-        </a>
-        <a class="oferta" href="https://meli.la/1P2z2Wb" target="_blank" rel="noopener sponsored">
-          <span class="oferta-icone" aria-hidden="true">🎮</span>
-          <h3>PlayStation 5 Slim 1TB</h3>
-          <p>Edição com disco, branco.</p>
-          <span class="oferta-cta">Ver oferta →</span>
-        </a>
-        <a class="oferta" href="https://meli.la/1fPv4Dn" target="_blank" rel="noopener sponsored">
-          <span class="oferta-icone" aria-hidden="true">💻</span>
-          <h3>Notebook Samsung Galaxy Book4</h3>
-          <p>i3, 8GB, SSD 256GB, tela 15,6" — pronto pra aulas online.</p>
-          <span class="oferta-cta">Ver oferta →</span>
-        </a>
-        <a class="oferta" href="https://meli.la/1HbzkbQ" target="_blank" rel="noopener sponsored">
-          <span class="oferta-icone" aria-hidden="true">📱</span>
-          <h3>Smartphone OUKITEL P2 Plus</h3>
-          <p>5G, bateria 5000mAh, tela 120Hz.</p>
-          <span class="oferta-cta">Ver oferta →</span>
-        </a>
+      <div class="section-head">
+        <div class="section-head-copy">
+          <span class="eyebrow">Como funciona</span>
+          <h2>Três passos. <span class="gold">Zero atrito.</span></h2>
+          <p>Do botão flutuante ao mapa mental, sem instalar outro app.</p>
+        </div>
+      </div>
+      <div class="workflow-grid">
+        <article class="workflow-card"><span class="workflow-num">1</span><h3>Instale e ative</h3><p>Adicione o PenWeb à Chrome Web Store e ative a caneta na página em que você está estudando.</p><span class="workflow-line"></span></article>
+        <article class="workflow-card"><span class="workflow-num">2</span><h3>Grife e pergunte</h3><p>Use a caneta, o marca-texto ou selecione um trecho. A barra flutuante acompanha o seu ritmo.</p><span class="workflow-line"></span></article>
+        <article class="workflow-card"><span class="workflow-num">3</span><h3>Revise do seu jeito</h3><p>Abra o chat, gere flashcards ou organize um mapa mental. As posições e anotações ficam salvas.</p></article>
       </div>
     </div>
   </section>
 
-  <!-- ===================== VERSÃO BYOK FINAL (1.5.5) ===================== -->
-  <section id="acesso" class="secao secao-escura">
-    <div class="container centro">
-      <h2>Linha <span class="destaque">BYOK Final</span> — 1.5.5</h2>
-      <p class="secao-sub">
-        A 1.5.5 é a versão <strong>traga a sua própria chave</strong>: você conecta a sua conta
-        OpenRouter e usa resumo, mapa mental, flashcards e o chat com a página
-        <strong>sem limite de créditos — para sempre</strong>. O que chega na próxima atualização
-        aparece marcado como <em>Em breve</em> no painel.
-      </p>
-      <p class="secao-sub">
-        Deixe seu e-mail e enviamos o acesso à 1.5.5 mesmo depois que a Chrome Web Store
-        receber a versão nova.
-      </p>
-      <form class="form-acesso" action="https://formsubmit.co/penweb.suporte@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="PenWeb 1.5.5 — pedido de acesso">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://thallyz.github.io/penweb/obrigado.html">
-        <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <label>E-mail
-          <input type="email" name="email" required placeholder="voce@exemplo.com" autocomplete="email">
-        </label>
-        <label>Para que você usa o PenWeb?
-          <select name="uso">
-            <option>Estudos e concursos</option>
-            <option>Trabalho e reuniões</option>
-            <option>Dar aulas</option>
-            <option>Outro</option>
-          </select>
-        </label>
-        <label>Você já tem chave OpenRouter?
-          <select name="chave">
-            <option>Sim, já uso</option>
-            <option>Ainda não — quero o passo a passo</option>
-          </select>
-        </label>
-        <label>Mensagem (opcional)
-          <textarea name="mensagem" placeholder="Dúvida ou recurso que você quer ver"></textarea>
-        </label>
-        <button type="submit" class="btn btn-primario">Quero acesso à 1.5.5</button>
-      </form>
-      <p class="form-nota">
-        Sem newsletter e sem spam: o e-mail serve apenas para enviar o acesso à versão BYOK.
-        O PenWeb não pede senha nem cartão.
-      </p>
-    </div>
-  </section>
-
-  <!-- ===================== PRIVACIDADE / CTA FINAL ===================== -->
-  <section class="secao secao-final">
-    <div class="container centro">
-      <h2>Privacidade em primeiro lugar</h2>
-      <p class="secao-sub">
-        O PenWeb <strong>não coleta nenhum dado pessoal</strong>. Seus desenhos ficam
-        salvos apenas no seu navegador, no seu computador. Nada é enviado para servidores.
-        <a href="privacidade.html">Leia a política completa</a>.
-      </p>
-      <a class="btn btn-primario btn-grande"
-         href="https://chromewebstore.google.com/detail/penweb/mmbhcihaimenkcagobpnkopbhdcgpopd"
-         target="_blank" rel="noopener">
-        Instalar grátis na Chrome Web Store
-      </a>
-    </div>
-  </section>
-
-  <!-- ===================== PERGUNTAS FREQUENTES (SEO) ===================== -->
-  <section id="faq" class="secao faq">
-    <div class="container ia-inner">
-      <h2>Perguntas frequentes</h2>
-      <details>
-        <summary>Como grifar PDFs e videoaulas no navegador?</summary>
-        <p>Abra o PDF ou a videoaula no Chrome, clique no ícone do PenWeb e use o marca-texto ou a caneta diretamente sobre a página — sem alterar o arquivo original.</p>
-      </details>
-      <details>
-        <summary>Dá para anotar em qualquer site, inclusive YouTube?</summary>
-        <p>Sim. O PenWeb desenha uma camada sobre a página atual: funciona em artigos, apostilas online, plataformas de curso e videoaulas no YouTube.</p>
-      </details>
-      <details>
-        <summary>O PenWeb é grátis? Preciso criar conta?</summary>
-        <p>Sim, é grátis e não pede conta, e-mail ou login. É só instalar na Chrome Web Store e usar na hora.</p>
-      </details>
-      <details>
-        <summary>A IA do PenWeb custa caro?</summary>
-        <p>Não. O PenWeb AI usa a sua própria chave de API (OpenRouter, Groq, DeepSeek, Ollama local ou Gemini) — você paga direto ao provedor pelo que usar, e o Ollama local é 100% gratuito.</p>
-      </details>
-      <details>
-        <summary>Meus desenhos são enviados para algum servidor?</summary>
-        <p>Não. Tudo fica salvo apenas no armazenamento do seu navegador. Nada é transmitido — por isso suas anotações continuam lá mesmo sem internet.</p>
-      </details>
-    </div>
-  </section>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "inLanguage": "pt-BR",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Como grifar PDFs e videoaulas no navegador?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Abra o PDF ou a videoaula no Chrome, clique no ícone do PenWeb e use o marca-texto ou a caneta diretamente sobre a página, sem alterar o arquivo original." }
-      },
-      {
-        "@type": "Question",
-        "name": "Dá para anotar em qualquer site, inclusive YouTube?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sim. O PenWeb desenha uma camada sobre a página atual: funciona em artigos, apostilas online, plataformas de curso e videoaulas no YouTube." }
-      },
-      {
-        "@type": "Question",
-        "name": "O PenWeb é grátis? Preciso criar conta?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sim, é grátis e não pede conta, e-mail ou login. É só instalar na Chrome Web Store e usar na hora." }
-      },
-      {
-        "@type": "Question",
-        "name": "A IA do PenWeb custa caro?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Não. O PenWeb AI usa a sua própria chave de API (OpenRouter, Groq, DeepSeek, Ollama local ou Gemini) — você paga direto ao provedor pelo que usar, e o Ollama local é 100% gratuito." }
-      },
-      {
-        "@type": "Question",
-        "name": "Meus desenhos são enviados para algum servidor?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Não. Tudo fica salvo apenas no armazenamento do seu navegador. Nada é transmitido." }
-      }
-    ]
-  }
-  </script>
-
-  <!-- PUBLICIDADE discreta, apenas no rodapé (permitida só NESTE site, nunca na extensão).
-       Para remover o anúncio do site por completo: apague este bloco <section> inteiro. -->
-  <section class="secao-ad" aria-label="Publicidade">
-    <div class="container centro">
-      <span class="ad-rotulo">Publicidade</span>
-      <!-- Slot 1: banner 468x60 -->
-      <div class="ad-slot">
-        <script>
-          atOptions = {
-            'key' : '4fb14aadfb774f7a273d13585cd33fdf',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
-          };
-        </script>
-        <script src="https://www.highrevenueformat.com/4fb14aadfb774f7a273d13585cd33fdf/invoke.js"></script>
+  <section class="privacy-band" id="privacidade">
+    <div class="container privacy-grid">
+      <div class="privacy-copy">
+        <span class="eyebrow">Privacidade em primeiro lugar</span>
+        <h2>Sua chave. Seus dados. <span class="gold" style="color:#7e611a">Seu ritmo.</span></h2>
+        <p>O PenWeb não pede conta e não cobra assinatura. A IA usa a chave que você já tem, e as chamadas saem do seu navegador direto para o provedor escolhido.</p>
+        <div class="privacy-points">
+          <div class="privacy-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 11V8a5 5 0 0 1 10 0v3"/><rect x="5" y="11" width="14" height="10" rx="2"/></svg><div><b>100% local por padrão</b><span>Grifos, desenhos e mapas ficam no armazenamento do seu navegador.</span></div></div>
+          <div class="privacy-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 12h16M12 4v16"/><circle cx="12" cy="12" r="9"/></svg><div><b>Sem intermediários</b><span>O texto enviado à IA vai direto ao provedor que você configurou.</span></div></div>
+          <div class="privacy-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 20h14M7 20V9l5-5 5 5v11"/><path d="M10 20v-5h4v5"/></svg><div><b>Offline para desenhar</b><span>A caneta, o marca-texto e a captura continuam funcionando sem internet.</span></div></div>
+        </div>
+        <a class="btn btn-dark" href="privacidade.html">Ler a política de privacidade <span class="arrow">↗</span></a>
       </div>
-      <!-- Slot 2: Native Banner -->
-      <div class="ad-slot">
-        <script async="async" data-cfasync="false"
-          src="https://pl31563099.profitableratecpmnetwork.com/891759b3e6baa5ee8500f10f02b141ff/invoke.js"></script>
-        <div id="container-891759b3e6baa5ee8500f10f02b141ff"></div>
+      <div class="key-card">
+        <span class="key-badge">BYOK · Bring your own key</span>
+        <h3>A IA certa, <em>na sua mão.</em></h3>
+        <p>Conecte OpenRouter, Google Gemini ou Groq. A chave fica só no seu navegador.</p>
+        <div class="key-lines">
+          <div class="key-line"><span>Chave</span><b>armazenada localmente</b></div>
+          <div class="key-line"><span>Requisição</span><b>direto ao provedor</b></div>
+          <div class="key-line"><span>Servidor PenWeb</span><b>nenhum no caminho</b></div>
+          <div class="key-line"><span>Conta</span><b>não precisa</b></div>
+        </div>
+        <div class="key-orb">✦</div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== RODAPÉ ===================== -->
-  <footer class="rodape">
-    <div class="container rodape-inner">
-      <p>© 2026 PenWeb — feito com dedicação no Brasil 🇧🇷</p>
-      <p class="rodape-links">
-        <a href="mailto:youthman95@gmail.com">Contato</a> ·
-        <a href="https://github.com/Thallyz" target="_blank" rel="noopener">GitHub</a> ·
-        <a href="privacidade.html">Privacidade</a> ·
-        <a href="https://chromewebstore.google.com/detail/penweb/mmbhcihaimenkcagobpnkopbhdcgpopd/reviews" target="_blank" rel="noopener">Avaliar na loja</a>
-      </p>
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head-copy">
+          <span class="eyebrow">Dúvidas rápidas</span>
+          <h2>Perguntas <span class="gold">frequentes.</span></h2>
+        </div>
+        <p class="side-note">Ainda com dúvida? Fale com a gente pelo e-mail <b>dwlabs.penweb@gmail.com</b>.</p>
+      </div>
+      <div class="faq-list">
+        <details open><summary>Como grifar PDFs e videoaulas no navegador?</summary><p>Abra o PDF ou a videoaula no Chrome, ative o PenWeb e use o marca-texto ou a caneta diretamente sobre a página, sem alterar o arquivo original.</p></details>
+        <details><summary>Dá para anotar em qualquer site, inclusive YouTube?</summary><p>Sim. O PenWeb desenha uma camada sobre a página atual: funciona em artigos, apostilas online, plataformas de curso e videoaulas no YouTube.</p></details>
+        <details><summary>O PenWeb é grátis? Preciso criar conta?</summary><p>Sim, é grátis e não pede conta, e-mail ou login. É só instalar na Chrome Web Store e usar na hora.</p></details>
+        <details><summary>A IA do PenWeb custa caro?</summary><p>Não. O PenWeb usa a sua própria chave de API (OpenRouter, Gemini ou Groq). Você paga direto ao provedor pelo que usar — sem assinatura da PenWeb.</p></details>
+        <details><summary>Meus desenhos são enviados para algum servidor?</summary><p>Não. Desenhos, grifos e mapas ficam no armazenamento do seu navegador. Quando você aciona uma ação de IA, apenas o texto necessário é enviado ao provedor configurado por você.</p></details>
+      </div>
     </div>
-  </footer>
+  </section>
 
+  <section class="section" id="acesso">
+    <div class="container">
+      <div class="access-card">
+        <div class="access-copy">
+          <span class="eyebrow">Acesso 1.5.5</span>
+          <h2>Leve o PenWeb para a sua próxima sessão.</h2>
+          <p>Deixe seu e-mail e receba o acesso à versão BYOK Final mesmo depois que a Chrome Web Store avançar para a próxima versão.</p>
+        </div>
+        <form class="access-form" action="https://formsubmit.co/dwlabs.penweb@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="PenWeb 1.5.5 — pedido de acesso">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://thallyz.github.io/penweb/obrigado.html">
+          <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label>E-mail <input type="email" name="email" required placeholder="voce@exemplo.com" autocomplete="email"></label>
+          <label>Para que você usa o PenWeb?
+            <select name="uso">
+              <option>Estudos e concursos</option>
+              <option>Trabalho e reuniões</option>
+              <option>Dar aulas</option>
+              <option>Outro</option>
+            </select>
+          </label>
+          <button class="btn btn-gold" type="submit">Receber acesso <span class="arrow">→</span></button>
+          <span class="access-note">Sem spam. O e-mail é usado só para enviar o acesso e novidades do PenWeb.</span>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="container">
+      <span class="eyebrow">Pronto para começar?</span>
+      <h2>Seu próximo quadro de estudos <span class="gold">começa aqui.</span></h2>
+      <p>Instale o PenWeb, ative a caneta e transforme qualquer página em material de revisão.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="https://chromewebstore.google.com/detail/penweb/mmbhcihaimenkcagobpnkopbhdcgpopd" target="_blank" rel="noopener">Instalar grátis <span class="arrow">↗</span></a>
+        <a class="btn btn-ghost" href="#faq">Tirar dúvidas</a>
+      </div>
+      <div class="proof-row">
+        <span class="proof"><i></i><b>Chrome Web Store</b> · disponível agora</span>
+        <span class="proof"><i></i>Edge, Firefox e Safari <b>em breve</b></span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="./" aria-label="PenWeb — início"><img src="img/icon-128.png" alt=""><div><b>PenWeb</b><span>by DWLabs</span></div></a>
+        <p>Caneta, grifos e IA para transformar leitura em revisão ativa — no seu navegador.</p>
+      </div>
+      <div class="footer-col"><h4>Produto</h4><a href="#recursos">Recursos</a><a href="#como-funciona">Como funciona</a><a href="#privacidade">Privacidade</a><a href="#acesso">Acesso 1.5.5</a></div>
+      <div class="footer-col"><h4>Suporte</h4><a href="#faq">Perguntas frequentes</a><a href="privacidade.html">Política de privacidade</a><a href="mailto:dwlabs.penweb@gmail.com">Contato</a><a href="https://github.com/Thallyz" target="_blank" rel="noopener">GitHub</a></div>
+      <div class="footer-col"><h4>Idioma</h4><a href="en/" lang="en" hreflang="en">English</a><span class="footer-muted">Español · em breve</span><a href="https://chromewebstore.google.com/detail/penweb/mmbhcihaimenkcagobpnkopbhdcgpopd" target="_blank" rel="noopener">Chrome Web Store ↗</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 PenWeb · feito com dedicação no Brasil 🇧🇷</span><span><a href="privacidade.html">Privacidade</a> · <a href="mailto:dwlabs.penweb@gmail.com">dwlabs.penweb@gmail.com</a></span></div>
+  </div>
+</footer>
+
+<script>
+  (() => {
+    const tabs = [...document.querySelectorAll('.feature-tab')];
+    const panels = [...document.querySelectorAll('.feature-panel')];
+    const select = id => {
+      tabs.forEach(t => t.setAttribute('aria-selected', String(t.dataset.tab === id)));
+      panels.forEach(p => { const active = p.id === 'panel-' + id; p.classList.toggle('active', active); p.hidden = !active; });
+    };
+    tabs.forEach(t => t.addEventListener('click', () => select(t.dataset.tab)));
+    select('pen');
+  })();
+</script>
 </body>
 </html>
