@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Política de Privacidade — PenWeb</title>
-  <meta name="description" content="Política de privacidade da extensão PenWeb. Não coletamos dados pessoais: grifos, desenhos e chaves ficam no seu navegador.">
+  <meta name="description" content="Política de privacidade do PenWeb: anotações e chaves ficam no seu navegador; conteúdo só vai ao provedor de IA escolhido quando você usa um recurso de IA.">
   <link rel="canonical" href="https://thallyz.github.io/penweb/privacidade.html">
   <link rel="alternate" hreflang="pt-BR" href="https://thallyz.github.io/penweb/privacidade.html">
   <link rel="alternate" hreflang="en" href="https://thallyz.github.io/penweb/en/privacy.html">
@@ -33,66 +33,218 @@
     <article class="legal-card">
       <span class="eyebrow">Documento legal</span>
       <h1>Política de Privacidade</h1>
-      <p class="legal-meta">Última atualização: 30 de outubro de 2026 · <a href="en/privacy.html" lang="en" hreflang="en">Read in English</a></p>
+      <p class="legal-meta">Última atualização: 2 de novembro de 2026 · <a href="en/privacy.html" lang="en" hreflang="en">Read in English</a></p>
 
       <p>
-        Esta política descreve como a extensão <strong>PenWeb</strong> lida com as suas
-        informações. Resumindo em uma frase: <strong>nós não coletamos, armazenamos nem
-        transmitimos nenhum dado pessoal seu.</strong>
+        O <strong>PenWeb</strong> é uma extensão local-first. O desenvolvedor não mantém
+        um servidor que receba o seu conteúdo e não usa seus dados para publicidade,
+        perfilamento ou venda. Alguns recursos de IA enviam conteúdo à API do provedor
+        que <strong>você</strong> escolher, somente quando você aciona uma ação e com a
+        sua própria chave.
       </p>
 
-      <h2>1. Dados que NÃO coletamos</h2>
-      <p>O PenWeb não coleta:</p>
+      <h2>1. Resumo</h2>
       <ul>
-        <li>Nome, e-mail ou qualquer identificador pessoal;</li>
-        <li>Histórico de navegação ou URLs visitadas;</li>
-        <li>Conteúdo das páginas em que você desenha;</li>
-        <li>Dados de pagamento ou credenciais.</li>
+        <li><strong>Fica no seu navegador:</strong> grifos, notas, desenhos, mapas, flashcards, histórico de chat, resumos de contexto, anexos recentes, preferências e chaves de API.</li>
+        <li><strong>Sai apenas quando você usa IA:</strong> o conteúdo necessário para a tarefa (texto, grifos, página, mensagens anteriores e imagens anexadas) vai direto do navegador para o provedor escolhido.</li>
+        <li><strong>Não fazemos:</strong> conta PenWeb, analytics, anúncios, venda de dados ou upload em segundo plano.</li>
       </ul>
 
-      <h2>2. Onde seus desenhos ficam</h2>
-      <p>
-        Tudo o que você desenha, grifa ou anota é processado e armazenado
-        <strong>localmente no seu próprio navegador</strong>, usando o armazenamento
-        local do dispositivo (localStorage). Nada é enviado para servidores nossos
-        ou de terceiros. Se você limpar os dados do navegador, essas anotações
-        locais serão apagadas junto.
-      </p>
-
-      <h2>3. Captura de tela</h2>
-      <p>
-        Quando você usa o recurso de salvar/exportar, o PenWeb captura apenas a aba
-        visível naquele momento, <strong>somente mediante o seu clique</strong>, e
-        gera uma imagem local para download. Essa imagem nunca é enviada a nenhum
-        servidor.
-      </p>
-
-      <h2>4. Permissões utilizadas</h2>
+      <h2>2. Definições</h2>
+      <p>Para esta política:</p>
       <ul>
-        <li><strong>activeTab / scripting</strong>: para desenhar sobre a página em que você está, apenas quando você ativa a extensão.</li>
-        <li><strong>downloads</strong>: para salvar a imagem exportada no seu computador.</li>
-        <li><strong>storage</strong>: para guardar localmente, no seu navegador, suas marcações, anotações, mapas e preferências.</li>
+        <li><strong>PenWeb / Extensão:</strong> o aplicativo para Chrome distribuído pela Chrome Web Store e o site oficial.</li>
+        <li><strong>DWLabs / Desenvolvedor:</strong> responsável pelo PenWeb, no Brasil.</li>
+        <li><strong>Usuário / você:</strong> pessoa que instala ou utiliza o PenWeb.</li>
+        <li><strong>Dispositivo:</strong> computador e navegador em que a extensão está instalada.</li>
+        <li><strong>Dados Pessoais:</strong> informação que identifica ou pode identificar uma pessoa, que pode estar contida em páginas, grifos, notas ou imagens.</li>
+        <li><strong>Provedor de IA:</strong> serviço escolhido por você para processar pedidos de IA, como OpenRouter, Google Gemini, Groq ou DeepSeek; o Ollama roda localmente.</li>
+        <li><strong>Dados de Uso:</strong> informações técnicas geradas automaticamente por serviços de terceiros, como logs de acesso do GitHub Pages.</li>
+        <li><strong>Serviço de Terceiro:</strong> serviço externo usado para hospedagem, contato, pagamento ou IA.</li>
+      </ul>
+
+      <h2>3. Dados que ficam no seu navegador</h2>
+      <p>
+        O PenWeb usa <strong>chrome.storage.local</strong> e o armazenamento local do
+        navegador para guardar, no seu dispositivo:
+      </p>
+      <ul>
+        <li>marcações e grifos: texto, título e URL da página, cor, nota e explicações geradas por IA;</li>
+        <li>desenhos, autosaves e sessões salvas;</li>
+        <li>mapas mentais, flashcards e preferências de tema, idioma e zoom;</li>
+        <li>histórico de chat por página, resumo de contexto e anexos recentes; imagens mais antigas podem ser removidas automaticamente para economizar espaço;</li>
+        <li>provedor, modelo e chave de API escolhidos.</li>
+      </ul>
+      <p>
+        Esses dados não são sincronizados com servidores do PenWeb. Se você limpar os
+        dados da extensão, apagar conversas/anotações ou desinstalar o PenWeb, eles
+        serão removidos do navegador.
+      </p>
+
+      <h2>4. Como usamos os dados</h2>
+      <ul>
+        <li><strong>Dados locais:</strong> são usados apenas para oferecer os recursos que você aciona no navegador — desenhar, grifar, anotar, pesquisar, revisar e conversar com a IA.</li>
+        <li><strong>Conteúdo enviado à IA:</strong> é usado para produzir a resposta solicitada ao provedor escolhido. Não usamos esse conteúdo para publicidade ou perfilamento.</li>
+        <li><strong>Formulário do site:</strong> o e-mail e a finalidade informados são usados para responder ao pedido e enviar novidades do PenWeb.</li>
+        <li><strong>Doações:</strong> links de Pix e Mercado Pago abrem serviços externos; o PenWeb não recebe dados de cartão.</li>
+      </ul>
+
+      <h2>5. Recursos de IA e provedores</h2>
+      <p>
+        Os recursos de IA são opcionais. Eles só funcionam quando você configura uma
+        chave de API de um provedor compatível — atualmente OpenRouter, Google Gemini,
+        Groq ou DeepSeek. O Ollama, quando configurado, roda localmente no seu
+        computador. A chave fica no armazenamento local e é enviada apenas ao provedor
+        escolhido, no cabeçalho de autenticação da chamada.
+      </p>
+      <p>
+        Quando você aciona uma ação de IA (chat, resumo, mapa mental, flashcards,
+        explicação de grifo ou análise de imagem), o PenWeb envia diretamente do seu
+        navegador para a API do provedor o conteúdo necessário para atender ao pedido,
+        que pode incluir:
+      </p>
+      <ul>
+        <li>sua pergunta e as instruções do sistema;</li>
+        <li>texto selecionado, grifos e notas;</li>
+        <li>título, URL e texto da página ativa;</li>
+        <li>mensagens anteriores do chat e o resumo de contexto;</li>
+        <li>imagens, prints ou recortes que você anexar ao pedido;</li>
+        <li>identificação do modelo e metadados técnicos da chamada.</li>
+      </ul>
+      <p>
+        O PenWeb não participa desse caminho com servidores próprios e não recebe uma
+        cópia do conteúdo enviado. O provedor escolhido trata os dados conforme a
+        política de privacidade e os termos dele, que podem incluir retenção para
+        segurança e uso para treinamento, dependendo do modelo e do plano (inclusive
+        planos gratuitos). Não controlamos essas práticas. Use os recursos de IA apenas
+        com conteúdo que você tem o direito de compartilhar e evite enviar dados
+        sensíveis.
+      </p>
+
+      <h2>6. Imagens, prints e capturas de tela</h2>
+      <p>
+        Recortes de região, prints colados e imagens enviadas pelo seletor de arquivos
+        são processados localmente no navegador. Uma imagem só é enviada a um provedor
+        de IA se você a anexar a uma mensagem e enviar o pedido. A captura de região e
+        a exportação em PNG não são enviadas a servidores do PenWeb; a exportação gera
+        um arquivo local para download.
+      </p>
+
+      <h2>7. Permissões utilizadas</h2>
+      <ul>
+        <li><strong>activeTab / scripting</strong>: para executar a caneta, o marca-texto e os recursos de página somente quando você ativa o PenWeb.</li>
+        <li><strong>Acesso a todos os sites (<code>&lt;all_urls&gt;</code>)</strong>: necessário para o launcher flutuante e para desenhar, grifar e anotar em qualquer página. Não usamos essa permissão para montar um histórico de navegação nem para ler páginas em segundo plano. A URL ativa é usada localmente para associar anotações e conversas; quando você usa IA, ela pode ser enviada ao provedor junto com o conteúdo do pedido.</li>
+        <li><strong>storage</strong>: para guardar anotações, mapas, flashcards, histórico e preferências no navegador.</li>
         <li><strong>sidePanel</strong>: para exibir o painel lateral com chat, grifos e editor de mapas.</li>
-        <li><strong>contextMenus</strong>: para adicionar ações do PenWeb ao menu de contexto do botão direito (grifar, explicar, resumir, traduzir e abrir o painel).</li>
+        <li><strong>contextMenus</strong>: para adicionar ações do PenWeb ao menu do botão direito.</li>
+        <li><strong>downloads</strong>: para salvar imagens e mapas exportados no seu computador.</li>
+        <li><strong>Acesso às APIs dos provedores</strong>: para enviar as chamadas de IA que você solicitar.</li>
       </ul>
-      <p>Nenhuma dessas permissões é usada para coletar ou transmitir dados a nossos servidores.</p>
 
-      <h2>5. PenWeb AI (OpenRouter, Gemini ou Groq)</h2>
+      <h2>8. Compartilhamento e o que não fazemos</h2>
       <p>
-        Os recursos de IA (explicar grifos, flashcards, resumo, mapa mental e chat
-        com a página) são opcionais e só funcionam se <strong>você</strong> colar sua
-        própria chave de API do provedor escolhido no painel (OpenRouter, Google
-        Gemini ou Groq). A chave fica salva apenas no seu navegador. Ao usar um
-        recurso de IA, o texto necessário (grifo e/ou trecho da página) é enviado
-        <strong>diretamente do seu navegador para a API do provedor
-        escolhido</strong>, sob a política de privacidade dele — nenhum servidor do
-        PenWeb participa do caminho e nada é enviado sem o seu clique.
+        Compartilhamos conteúdo apenas com o provedor de IA que você escolher, quando
+        você acionar um recurso de IA, e com os serviços necessários para o site
+        (GitHub Pages e FormSubmit, para hospedagem e contato) ou para uma doação que
+        você iniciar (Mercado Pago). Podemos divulgar dados do formulário se formos
+        legalmente obrigados ou para proteger direitos e segurança. Não vendemos,
+        alugamos nem trocamos dados; não usamos analytics, pixels de rastreamento,
+        anúncios ou perfis publicitários; não executamos código remoto.
+      </p>
+      <p>
+        O uso de dados obtidos por APIs do Chrome segue a Chrome Web Store User Data
+        Policy, incluindo os requisitos de uso limitado (Limited Use).
       </p>
 
-      <h2>6. Contato</h2>
+      <h2>9. Cookies e tecnologias semelhantes</h2>
       <p>
-        Dúvidas sobre esta política? Fale com a gente pelo e-mail
-        <a href="mailto:dwlabs.penweb@gmail.com">dwlabs.penweb@gmail.com</a>.
+        A extensão não usa cookies de rastreamento nem publicidade. O site é estático,
+        não tem anúncios e não usa analytics. O GitHub Pages pode registrar dados
+        técnicos de acesso conforme a política dele. O formulário de contato usa o
+        FormSubmit para entregar a mensagem; esse serviço pode usar cookies ou
+        tecnologias necessárias ao funcionamento e à proteção contra spam, conforme a
+        política dele. Provedores de IA e de pagamento também podem usar suas próprias
+        tecnologias quando você acessa esses serviços.
+      </p>
+
+      <h2>10. Base legal, direitos e controle (LGPD)</h2>
+      <p>
+        O tratamento local ocorre no seu dispositivo e sob seu controle. O envio à IA
+        acontece por sua iniciativa ao usar um recurso de IA; o formulário do site é
+        usado para responder ao seu pedido e enviar atualizações que você solicitou.
+        Quando aplicável, tratamos dados com base no consentimento, na execução do
+        serviço solicitado, no cumprimento de obrigações legais ou no legítimo
+        interesse de responder e manter o serviço seguro.
+      </p>
+      <p>
+        Nos termos da LGPD (Lei 13.709/2018), você pode solicitar confirmação de
+        tratamento, acesso, correção, eliminação, portabilidade, informação sobre
+        compartilhamento e revogação de consentimento. Como os dados locais ficam no seu
+        navegador, você os controla diretamente pelas opções do painel ou limpando os
+        dados da extensão. Para dados do formulário, escreva para o contato abaixo; para
+        dados enviados a um provedor de IA, use os controles e o canal de privacidade
+        desse provedor. Se você estiver no EEE ou no Reino Unido, também pode ter
+        direitos equivalentes previstos na legislação local.
+      </p>
+
+      <h2>11. Retenção</h2>
+      <p>
+        Os dados locais permanecem no seu navegador até você apagá-los. Dados do
+        formulário são mantidos pelo tempo necessário para responder ao pedido e enviar
+        as atualizações solicitadas, ou até você pedir a remoção. O provedor de IA
+        define o prazo de retenção dele; o GitHub Pages, o FormSubmit e o Mercado Pago
+        mantêm logs e dados conforme as políticas próprias. Não mantemos uma cópia
+        remota dos seus dados locais para restauração.
+      </p>
+
+      <h2>12. Transferência internacional</h2>
+      <p>
+        Provedores de IA, GitHub Pages, FormSubmit e serviços de pagamento podem
+        processar dados fora do Brasil. Ao usar um recurso de IA, enviar o formulário ou
+        iniciar uma doação, você direciona os dados ao serviço escolhido, que adota as
+        salvaguardas descritas na própria política. Quando exigido, o PenWeb utiliza
+        mecanismos contratuais ou bases legais aplicáveis para o tratamento que estiver
+        sob seu controle.
+      </p>
+
+      <h2>13. Segurança</h2>
+      <p>
+        As chaves e os dados locais ficam no armazenamento da extensão no seu perfil do
+        Chrome. Adotamos medidas razoáveis para evitar acessos indevidos, mas nenhum
+        sistema é totalmente imune a falhas. Proteja o acesso ao seu computador e à sua
+        conta do navegador; se você usa uma chave de API, revogue-a no provedor se
+        suspeitar de exposição.
+      </p>
+
+      <h2>14. Crianças e adolescentes</h2>
+      <p>
+        O PenWeb não é direcionado a crianças e não exige conta. Não coletamos
+        intencionalmente dados de crianças pelo site. Se um responsável acredita que
+        uma criança enviou dados pelo formulário, entre em contato para que possamos
+        remover as informações. O uso de recursos de IA por menores deve seguir as
+        regras e a idade mínima do provedor escolhido.
+      </p>
+
+      <h2>15. Links para sites de terceiros</h2>
+      <p>
+        A extensão e o site contêm links para provedores de IA, serviços de doação,
+        GitHub e outras páginas externas. Não controlamos esses sites e não somos
+        responsáveis pelas práticas de privacidade deles. Leia as políticas dos
+        serviços antes de enviar dados ou concluir uma doação.
+      </p>
+
+      <h2>16. Alterações nesta política</h2>
+      <p>
+        Podemos atualizar esta política quando o PenWeb ganhar novos recursos ou
+        provedores. A data no topo indica a versão vigente. Mudanças materiais serão
+        destacadas nesta página; o uso contínuo da extensão após a atualização
+        significa que você tomou conhecimento da versão revisada.
+      </p>
+
+      <h2>17. Contato</h2>
+      <p>
+        Dúvidas sobre esta política ou pedidos de acesso/remoção? Fale com a gente pelo
+        e-mail <a href="mailto:dwlabs.penweb@gmail.com">dwlabs.penweb@gmail.com</a>.
       </p>
     </article>
   </div>

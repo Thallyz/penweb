@@ -2,7 +2,7 @@
 
 **Highlight, draw and annotate on any web page.**
 
-PenWeb is a free Chrome extension (Manifest V3) that turns any page — video lectures, in-browser PDFs, handouts, articles — into a study whiteboard. Everything is processed and stored **locally in your browser**: no personal data is collected or transmitted.
+PenWeb is a free Chrome extension (Manifest V3) that turns any page — video lectures, in-browser PDFs, handouts, articles — into a study whiteboard. Your notes, drawings, maps and chat stay **locally in your browser**; AI features send only the necessary content directly to the provider you configure. PenWeb does not run a server that receives your content.
 
 🔗 [Chrome Web Store](https://chromewebstore.google.com/detail/penweb/mmbhcihaimenkcagobpnkopbhdcgpopd) ·
 🌐 [Website](https://thallyz.github.io/penweb/en/) ·
@@ -49,7 +49,7 @@ Select an area of the page (or paste a screenshot with Ctrl+V) and ask the AI to
 
 ## Privacy first
 
-PenWeb **collects no personal data**. Your drawings are saved only in your browser's local storage. Nothing is sent to any server. [Read the full policy](https://thallyz.github.io/penweb/en/privacy.html).
+PenWeb does not collect personal data for itself. Your notes, drawings, maps, chat history and flashcards stay in your browser's local storage. AI features are optional: when you use one, the necessary content goes directly from your browser to the provider you configured, under that provider's policy. [Read the full policy](https://thallyz.github.io/penweb/en/privacy.html).
 
 ## Roadmap
 
@@ -100,7 +100,7 @@ dwlabs.penweb@gmail.com
 <details>
 <summary><strong>Português</strong></summary>
 
-**Grife, desenhe e anote em qualquer página da web.** PenWeb é uma extensão para Chrome (Manifest V3) que transforma qualquer página — videoaulas, PDFs no navegador, apostilas, artigos — em um quadro de estudos. Tudo é processado e armazenado **localmente no seu navegador**; nenhum dado pessoal é coletado.
+**Grife, desenhe e anote em qualquer página da web.** PenWeb é uma extensão para Chrome (Manifest V3) que transforma qualquer página — videoaulas, PDFs no navegador, apostilas, artigos — em um quadro de estudos. Suas anotações, desenhos, mapas e chat ficam **localmente no seu navegador**; os recursos de IA enviam somente o conteúdo necessário, diretamente ao provedor que você configurar. O PenWeb não mantém um servidor que receba seu conteúdo.
 
 Este repositório contém o **site oficial** (página estática, HTML + CSS puros, hospedada no GitHub Pages) e a **configuração remota** (`ofertas.json`) consumida pela extensão. O site não tem anúncios nem parceiros comerciais: ele é mantido por doações opcionais.
 
