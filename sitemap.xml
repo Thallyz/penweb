@@ -25,4 +25,16 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://thallyz.github.io/penweb/en/privacy.html"/>
     <lastmod>2026-11-02</lastmod>
   </url>
+  <url>
+    <loc>https://thallyz.github.io/penweb/suporte.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://thallyz.github.io/penweb/suporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thallyz.github.io/penweb/en/support.html"/>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://thallyz.github.io/penweb/en/support.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://thallyz.github.io/penweb/suporte.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thallyz.github.io/penweb/en/support.html"/>
+    <lastmod>2026-11-02</lastmod>
+  </url>
 </urlset>

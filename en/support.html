@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — PenWeb</title>
+  <meta name="description" content="PenWeb help: installation, pen, side panel, AI key, common issues and contact.">
+  <link rel="canonical" href="https://thallyz.github.io/penweb/en/support.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://thallyz.github.io/penweb/suporte.html">
+  <link rel="alternate" hreflang="en" href="https://thallyz.github.io/penweb/en/support.html">
+  <link rel="alternate" hreflang="x-default" href="https://thallyz.github.io/penweb/suporte.html">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/png" href="../img/icon-128.png?v=20261102-1">
+  <link rel="stylesheet" href="../css/style.css?v=20261030-2">
+</head>
+<body>
+
+<header class="legal-top">
+  <div class="container legal-top-inner">
+    <a class="brand" href="index.html" aria-label="PenWeb — home">
+      <img src="../img/icon-128.png" alt="">
+      <div><b>PenWeb</b><span>by DWLabs</span></div>
+    </a>
+    <div class="legal-top-actions">
+      <a href="index.html">← Back to home</a>
+      <a class="lang" href="../suporte.html" lang="pt-BR" hreflang="pt-BR" title="Ler em português">PT</a>
+    </div>
+  </div>
+</header>
+
+<main class="legal-page">
+  <div class="container legal-wrap">
+    <article class="legal-card">
+      <span class="eyebrow">Help</span>
+      <h1>Support</h1>
+      <p class="legal-meta">PenWeb 1.6.1 · <a href="privacy.html">Privacy Policy</a></p>
+
+      <h2>Getting started</h2>
+      <ol>
+        <li>Install PenWeb from the Chrome Web Store and pin its icon to the Chrome toolbar.</li>
+        <li>Open any page or PDF. The PenWeb floating button appears on the right side; if it does not show up after installing or updating, reload the page.</li>
+        <li>Click the floating button or the extension icon to open the side panel.</li>
+        <li>Use the pen and highlighter on the page. Highlights, notes, drawings, maps and flashcards are saved in your browser.</li>
+      </ol>
+
+      <h2>Set up AI (optional)</h2>
+      <p>
+        AI features are optional and use your own API key. In the panel, open
+        <strong>AI Settings</strong>, choose the provider (OpenRouter, Google Gemini,
+        Groq or DeepSeek), click <strong>Get a free key</strong>, paste the key and click
+        <strong>Save &amp; test</strong>. The key stays in your browser's local storage;
+        request content goes directly to the chosen provider.
+      </p>
+      <p>
+        Ollama is a local option: install Ollama on your computer and select the
+        corresponding provider. No PenWeb account is required.
+      </p>
+
+      <h2>Common issues</h2>
+      <ul>
+        <li><strong>The floating button is missing:</strong> reload the page after installing or updating the extension. Chrome blocks injection on internal Chrome pages, the Web Store and some protected pages for security.</li>
+        <li><strong>The panel does not open:</strong> check that the extension is enabled from the Chrome icon and try the floating button. Update Chrome if it is an old version.</li>
+        <li><strong>The AI reports a key error:</strong> make sure the key was pasted without spaces, the selected provider matches the key, and the provider account has access to the chosen model.</li>
+        <li><strong>429 or usage limit:</strong> the provider's free plan reached its limit. Wait, switch models or use another key/provider.</li>
+        <li><strong>Summary/map finds no text:</strong> some PDFs and pages render content in an internal viewer. Try the Page source, select the text or use a region crop.</li>
+        <li><strong>I lost a note:</strong> notes are saved in your browser. Do not uninstall the extension or clear Chrome data before exporting what you need. PenWeb does not keep a cloud copy.</li>
+      </ul>
+
+      <h2>Privacy</h2>
+      <p>
+        PenWeb has no account or server that receives your content. What stays local and
+        what is sent to the AI provider is detailed in the
+        <a href="privacy.html">Privacy Policy</a>.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Still stuck? Email
+        <a href="mailto:dwlabs.penweb@gmail.com">dwlabs.penweb@gmail.com</a> with your
+        PenWeb version, browser and a description of the issue. For AI errors, never
+        send your API key by email.
+      </p>
+    </article>
+  </div>
+</main>
+
+<footer class="legal-footer">
+  <div class="container legal-footer-inner">
+    <span>© 2026 PenWeb · made with dedication in Brazil 🇧🇷</span>
+    <span><a href="index.html">Home</a> · <a href="privacy.html">Privacy</a> · <a href="../suporte.html" hreflang="pt-BR" lang="pt-BR">Português</a> · <a href="mailto:dwlabs.penweb@gmail.com">Contact</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
